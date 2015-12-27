@@ -1,0 +1,8 @@
+##### Java .gitignore file #####
+
+# ignore class files
+*.class
+
+# ignore everything in the bin folder
+bin/
+
