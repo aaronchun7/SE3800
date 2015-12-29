@@ -51,7 +51,11 @@ public class Calculator {
 				getUserInput();
 				break;
 			case "sub":
-				//TODO
+				list = getIntegers();
+				if(list != null){
+					sub(list);
+				}
+				getUserInput();
 				break;
 			case "mult":
 				list = getIntegers();
@@ -60,7 +64,11 @@ public class Calculator {
 				getUserInput();
 				break;
 			case "div":
-				//TODO
+				list = getIntegers();
+				if(list != null){
+					div(list);
+				}
+				getUserInput();
 				break;
 			case "hist":
 				//TODO
@@ -134,9 +142,12 @@ public class Calculator {
 	 * @author chuna
 	 * @return
 	 */
-	public int sub(List<Integer> l){
-		//TODO
-		return 0;
+	public static void sub(List<Integer> l){
+		int dif = l.get(0);
+		for(int i = 1; i < l.size(); i++){
+			dif -= l.get(i);
+		}
+		System.out.println("The difference is: " + dif);
 	}
 	
 	/**
@@ -159,9 +170,12 @@ public class Calculator {
 	 * @author chuna
 	 * @return
 	 */
-	public int div(List<Integer> l){
-		//TODO
-		return 0;
+	public static void div(List<Integer> l){
+		int quot = l.get(0);
+		for(int i = 1; i < l.size(); i++){
+			quot /= l.get(i);
+		}
+		System.out.println("The quotient is: " + quot);
 	}
 	
 	/**
