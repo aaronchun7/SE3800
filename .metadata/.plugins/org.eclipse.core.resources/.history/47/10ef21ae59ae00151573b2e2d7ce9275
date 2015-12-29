@@ -69,14 +69,4 @@ public class Calculation {
 	public void setAns(int answer){
 		this.answer = answer;
 	}
-	
-	@Override
-	public String toString(){
-		String output = command + " | ";
-		for(Integer i : input){
-			output += i + " ";
-		}
-		output += "| " + answer;
-		return output;
-	}
 }
