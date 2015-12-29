@@ -49,15 +49,12 @@ public class Calculator {
 		List<Integer> list;
 		switch(cmd){
 			case "add":
-				calc = new Calculation("add");
+//				Calculation calc = new Calculation("add");
 				list = getIntegers();
-				calc.setInput(list);
-				if (list != null){
-					int sum = add(list);
-					System.out.println("The sum is: " + sum);
-					calc.setAns(sum);
-				}
-				history.add(calc);
+//				calc.setInput(list);
+				if (list != null)
+					add(list);
+				
 				getUserInput();
 				break;
 			case "sub":
@@ -73,15 +70,9 @@ public class Calculator {
 				getUserInput();
 				break;
 			case "mult":
-				calc = new Calculation("mult");
 				list = getIntegers();
-				calc.setInput(list);
-				if (list != null){
-					int product = mult(list);
-					System.out.println("The product is: " + product);
-					calc.setAns(product);
-				}
-				history.add(calc);
+				if (list != null)
+					mult(list);
 				getUserInput();
 				break;
 			case "div":
@@ -155,12 +146,12 @@ public class Calculator {
 	 * @param l - list of integers
 	 * @return positive sum
 	 */
-	public static int add(List<Integer> l){
+	public static void add(List<Integer> l){
 		int sum = 0;
 		for(Integer i : l){
 			sum += i;
 		}
-		return sum;
+		System.out.println("The sum is: " + sum);
 	}
 	
 	/**
@@ -184,12 +175,12 @@ public class Calculator {
 	 * @param l - list of integers
 	 * @return
 	 */
-	public static int mult(List<Integer> l){
+	public static void mult(List<Integer> l){
 		int product = 1;
 		for(Integer i : l){
 			product *= i;
 		}
-		return product;
+		System.out.println("The product is: " + product);
 	}
 	
 	/**
