@@ -201,9 +201,10 @@ public class Calculator {
 		}
 		if(divZero){
 			System.out.println("Error: Cannot divide by zero.");
-			getUserInput();
+			
+		}else{
+			return quot;
 		}
-		return quot;
 	}
 	
 	/**
@@ -213,7 +214,7 @@ public class Calculator {
 	 * @param num	Result of the 
 	 * @return
 	 */
-	public int hist(){
+	public int hist(int num){
 		//TODO
 		return 0;
 	}
@@ -236,7 +237,7 @@ public class Calculator {
 	/**
 	 * User Story #7
 	 * Allows the user to use previous results in current calculations.
-	 * Ex: 5 + 3 = 8; -> 2 + result = 10
+	 * Ex: 8 + 3 = 8; -> 2 + result = 10
 	 * @author kuczynskij
 	 */
 	public void reuse(){
