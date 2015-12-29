@@ -17,8 +17,6 @@ public class Calculator {
 	
 	private static ArrayList<Calculation> history = new ArrayList<>();
 	
-	private static Calculation calc;
-	
 	/**
 	 * Runs the program.
 	 * @param args
@@ -49,24 +47,19 @@ public class Calculator {
 		List<Integer> list;
 		switch(cmd){
 			case "add":
-//				Calculation calc = new Calculation("add");
+				Calculation calc = new Calculation("add");
 				list = getIntegers();
-//				calc.setInput(list);
+				calc.setInput(list);
 				if (list != null)
 					add(list);
 				
 				getUserInput();
 				break;
 			case "sub":
-				calc = new Calculation("sub");
 				list = getIntegers();
-				calc.setInput(list);
 				if(list != null){
-					int dif = sub(list);
-					System.out.println("The difference is: " + dif);
-					calc.setAns(dif);
+					sub(list);
 				}
-				history.add(calc);
 				getUserInput();
 				break;
 			case "mult":
@@ -76,15 +69,10 @@ public class Calculator {
 				getUserInput();
 				break;
 			case "div":
-				calc = new Calculation("div");
 				list = getIntegers();
-				calc.setInput(list);
 				if(list != null){
-					int quot = div(list);
-					System.out.println("The quotient is: " + quot);
-					calc.setAns(quot);
+					div(list);
 				}
-				history.add(calc);
 				getUserInput();
 				break;
 			case "hist":
@@ -159,13 +147,12 @@ public class Calculator {
 	 * @author chuna
 	 * @return
 	 */
-	public static int sub(List<Integer> l){
+	public static void sub(List<Integer> l){
 		int dif = l.get(0);
 		for(int i = 1; i < l.size(); i++){
 			dif -= l.get(i);
 		}
-//		System.out.println("The difference is: " + dif);
-		return dif;
+		System.out.println("The difference is: " + dif);
 	}
 	
 	/**
@@ -188,7 +175,7 @@ public class Calculator {
 	 * @author chuna
 	 * @return
 	 */
-	public static int div(List<Integer> l){
+	public static void div(List<Integer> l){
 		int quot = l.get(0);
 		boolean divZero = false;
 		for(int i = 1; i < l.size(); i++){
@@ -201,9 +188,8 @@ public class Calculator {
 		}
 		if(divZero){
 			System.out.println("Error: Cannot divide by zero.");
-			
 		}else{
-			return quot;
+			System.out.println("The quotient is: " + quot);
 		}
 	}
 	
