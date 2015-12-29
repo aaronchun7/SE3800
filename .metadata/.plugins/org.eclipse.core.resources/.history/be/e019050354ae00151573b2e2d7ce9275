@@ -15,8 +15,6 @@ public class Calculator {
 	//Scanner object to get user input.
 	private static Scanner in;
 	
-	private static ArrayList<Calculation> history;
-	
 	/**
 	 * Runs the program.
 	 * @param args

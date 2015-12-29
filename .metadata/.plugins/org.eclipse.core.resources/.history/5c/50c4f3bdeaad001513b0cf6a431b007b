@@ -15,8 +15,6 @@ public class Calculator {
 	//Scanner object to get user input.
 	private static Scanner in;
 	
-	private static ArrayList<Calculation> history;
-	
 	/**
 	 * Runs the program.
 	 * @param args
@@ -76,8 +74,8 @@ public class Calculator {
 				//TODO
 				break;
 			case "clear":
-				clear();
-				break;
+				//TODO
+			break;
 			case "reuse":
 				//TODO
 				break;
@@ -207,8 +205,9 @@ public class Calculator {
 	 * @author chuna
 	 * @return
 	 */
-	public static void clear(){
+	public boolean clear(){
 		//TODO
+		return false;
 	}
 	
 	/**

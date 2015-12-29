@@ -1,0 +1,15 @@
+package calculator;
+
+/**
+ * This object will hold the information for each of the 
+ * calculations made.
+ * @author Aaron
+ *
+ */
+public class Calculation {
+	
+	// The command entered (add, sub, mult, div,hist, wombo)
+	private String command;
+	
+	private 
+}
