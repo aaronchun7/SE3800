@@ -116,13 +116,6 @@ public class Calculator {
 				System.exit(0);
 				break;
 			default:
-				/* 
-				 * Clear the buffer of any extra things input 
-				 * after the incorrect command.
-				 */
-				in.nextLine();
-				System.out.println("Woops, looks like you inputed an"
-						+ " invalid command.");
 				getUserInput();
 				break;
 		}	

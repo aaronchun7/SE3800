@@ -121,8 +121,6 @@ public class Calculator {
 				 * after the incorrect command.
 				 */
 				in.nextLine();
-				System.out.println("Woops, looks like you inputed an"
-						+ " invalid command.");
 				getUserInput();
 				break;
 		}	
