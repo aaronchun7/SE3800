@@ -15,7 +15,7 @@ public class Calculator {
 	//Scanner object to get user input.
 	private static Scanner in;
 	
-	private static ArrayList<Calculation> history = new ArrayList<>();
+	private static ArrayList<Calculation> history;
 	
 	/**
 	 * Runs the program.
@@ -208,13 +208,7 @@ public class Calculator {
 	 * @return
 	 */
 	public static void clear(){
-		try{
-			history = new ArrayList<Calculation>();
-			System.out.println("The Calculation history has been cleared.");
-		}catch(Exception e){
-			System.out.println("Error: History may not have been cleared.");
-		}
-		
+		//TODO
 	}
 	
 	/**
