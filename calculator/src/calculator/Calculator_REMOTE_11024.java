@@ -142,8 +142,8 @@ public class Calculator {
         String intStrArr [] = intStr.split(" ");
         try{
         	for (int i = 0; i < intStrArr.length; i++) {
-//	            System.out.println("Item #" + i + " is " +
-//	                    intStrArr[i]);
+	            System.out.println("Item #" + i + " is " +
+	                    intStrArr[i]);
 	            int temp = Integer.parseInt(intStrArr[i]);
 	            l.add(temp);
             }
@@ -160,7 +160,7 @@ public class Calculator {
 	 * Adds the a list of positive Integers.
 	 * @author kuczynskij
 	 * @param l - list of integers
-	 * @return non-negative sum
+	 * @return positive sum
 	 */
 	public static int add(List<Integer> l){
 		int sum = 0;
@@ -180,6 +180,7 @@ public class Calculator {
 		for(int i = 1; i < l.size(); i++){
 			dif -= l.get(i);
 		}
+//		System.out.println("The difference is: " + dif);
 		return dif;
 	}
 	
@@ -225,9 +226,12 @@ public class Calculator {
 	 * User Story #5
 	 * Prints out the previous computation history the user as input.
 	 * @author kuczynskij
+	 * @param num	Result of the 
+	 * @return
 	 */
-	public static void hist(){
+	public int hist(){
 		//TODO
+		return 0;
 	}
 	
 	/**
@@ -238,18 +242,16 @@ public class Calculator {
 	public static void clear(){
 		try{
 			history = new ArrayList<Calculation>();
-			System.out.println("The Calculation history has been"
-					+ " cleared.");
+			System.out.println("The Calculation history has been cleared.");
 		}catch(Exception e){
-			System.out.println("Error: History may not have been "
-					+ "cleared.");
+			System.out.println("Error: History may not have been cleared.");
 		}
+		
 	}
 	
 	/**
 	 * User Story #7
-	 * Allows the user to use previous results in current 
-	 * calculations.
+	 * Allows the user to use previous results in current calculations.
 	 * Ex: 5 + 3 = 8; -> 2 + result = 10
 	 * @author kuczynskij
 	 */

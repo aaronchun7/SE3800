@@ -54,7 +54,7 @@ public class Calculator {
 				calc.setInput(list);
 				if (list != null){
 					int sum = add(list);
-					System.out.println("The sum is: " + sum);
+					System.out.println("The product is: " + sum);
 					calc.setAns(sum);
 				}
 				history.add(calc);
@@ -116,13 +116,6 @@ public class Calculator {
 				System.exit(0);
 				break;
 			default:
-				/* 
-				 * Clear the buffer of any extra things input 
-				 * after the incorrect command.
-				 */
-				in.nextLine();
-				System.out.println("Woops, looks like you inputed an"
-						+ " invalid command.");
 				getUserInput();
 				break;
 		}	
@@ -142,8 +135,6 @@ public class Calculator {
         String intStrArr [] = intStr.split(" ");
         try{
         	for (int i = 0; i < intStrArr.length; i++) {
-//	            System.out.println("Item #" + i + " is " +
-//	                    intStrArr[i]);
 	            int temp = Integer.parseInt(intStrArr[i]);
 	            l.add(temp);
             }
@@ -180,6 +171,7 @@ public class Calculator {
 		for(int i = 1; i < l.size(); i++){
 			dif -= l.get(i);
 		}
+//		System.out.println("The difference is: " + dif);
 		return dif;
 	}
 	
@@ -216,22 +208,30 @@ public class Calculator {
 		}
 		if(divZero){
 			System.out.println("Error: Cannot divide by zero.");
-			getUserInput();
+			
+		}else{
+			return quot;
 		}
-		return quot;
+		return 0;
 	}
 	
 	/**
 	 * User Story #5
 	 * Prints out the previous computation history the user as input.
 	 * @author kuczynskij
+	 * @param num - number of history points to go back
+	 * @return
 	 */
-	public static void hist(){
+	public static void hist(int num){
 		//TODO
+//		for(int i = 0; ){
+//			
+//		}
 	}
 	
 	/**
 	 * User Story #6
+	 * TODO
 	 * @author chuna
 	 * @return
 	 */
@@ -250,7 +250,7 @@ public class Calculator {
 	 * User Story #7
 	 * Allows the user to use previous results in current 
 	 * calculations.
-	 * Ex: 5 + 3 = 8; -> 2 + result = 10
+	 * Ex: 8 + 3 = 8; -> 2 + result = 10
 	 * @author kuczynskij
 	 */
 	public void reuse(){
