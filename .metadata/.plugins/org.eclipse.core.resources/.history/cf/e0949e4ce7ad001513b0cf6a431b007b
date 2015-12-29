@@ -172,20 +172,10 @@ public class Calculator {
 	 */
 	public static void div(List<Integer> l){
 		int quot = l.get(0);
-		boolean divZero = false;
 		for(int i = 1; i < l.size(); i++){
-			if(l.get(i) != 0){
-				quot /= l.get(i);
-			}else{
-				divZero = true;
-				break;
-			}
+			quot /= l.get(i);
 		}
-		if(divZero){
-			System.out.println("Error: Cannot divide by zero.");
-		}else{
-			System.out.println("The quotient is: " + quot);
-		}
+		System.out.println("The quotient is: " + quot);
 	}
 	
 	/**
