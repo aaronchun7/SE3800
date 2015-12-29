@@ -49,12 +49,15 @@ public class Calculator {
 		List<Integer> list;
 		switch(cmd){
 			case "add":
-//				Calculation calc = new Calculation("add");
+				calc = new Calculation("add");
 				list = getIntegers();
-//				calc.setInput(list);
-				if (list != null)
-					add(list);
-				
+				calc.setInput(list);
+				if (list != null){
+					int sum = add(list);
+					System.out.println("The product is: " + sum);
+					calc.setAns(sum);
+				}
+				history.add(calc);
 				getUserInput();
 				break;
 			case "sub":
@@ -70,9 +73,15 @@ public class Calculator {
 				getUserInput();
 				break;
 			case "mult":
+				calc = new Calculation("mult");
 				list = getIntegers();
-				if (list != null)
-					mult(list);
+				calc.setInput(list);
+				if (list != null){
+					int product = mult(list);
+					System.out.println("The product is: " + product);
+					calc.setAns(product);
+				}
+				history.add(calc);
 				getUserInput();
 				break;
 			case "div":
@@ -126,8 +135,6 @@ public class Calculator {
         String intStrArr [] = intStr.split(" ");
         try{
         	for (int i = 0; i < intStrArr.length; i++) {
-	            System.out.println("Item #" + i + " is " +
-	                    intStrArr[i]);
 	            int temp = Integer.parseInt(intStrArr[i]);
 	            l.add(temp);
             }
@@ -144,14 +151,14 @@ public class Calculator {
 	 * Adds the a list of positive Integers.
 	 * @author kuczynskij
 	 * @param l - list of integers
-	 * @return positive sum
+	 * @return non-negative sum
 	 */
-	public static void add(List<Integer> l){
+	public static int add(List<Integer> l){
 		int sum = 0;
 		for(Integer i : l){
 			sum += i;
 		}
-		System.out.println("The sum is: " + sum);
+		return sum;
 	}
 	
 	/**
@@ -175,12 +182,12 @@ public class Calculator {
 	 * @param l - list of integers
 	 * @return
 	 */
-	public static void mult(List<Integer> l){
+	public static int mult(List<Integer> l){
 		int product = 1;
 		for(Integer i : l){
 			product *= i;
 		}
-		System.out.println("The product is: " + product);
+		return product;
 	}
 	
 	/**
@@ -205,38 +212,44 @@ public class Calculator {
 		}else{
 			return quot;
 		}
+		return 0;
 	}
 	
 	/**
 	 * User Story #5
 	 * Prints out the previous computation history the user as input.
 	 * @author kuczynskij
-	 * @param num	Result of the 
+	 * @param num - number of history points to go back
 	 * @return
 	 */
-	public int hist(int num){
+	public static void hist(int num){
 		//TODO
-		return 0;
+//		for(int i = 0; ){
+//			
+//		}
 	}
 	
 	/**
 	 * User Story #6
+	 * TODO
 	 * @author chuna
 	 * @return
 	 */
 	public static void clear(){
 		try{
 			history = new ArrayList<Calculation>();
-			System.out.println("The Calculation history has been cleared.");
+			System.out.println("The Calculation history has been"
+					+ " cleared.");
 		}catch(Exception e){
-			System.out.println("Error: History may not have been cleared.");
+			System.out.println("Error: History may not have been "
+					+ "cleared.");
 		}
-		
 	}
 	
 	/**
 	 * User Story #7
-	 * Allows the user to use previous results in current calculations.
+	 * Allows the user to use previous results in current 
+	 * calculations.
 	 * Ex: 8 + 3 = 8; -> 2 + result = 10
 	 * @author kuczynskij
 	 */
