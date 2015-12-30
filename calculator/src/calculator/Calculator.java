@@ -258,10 +258,11 @@ public class Calculator {
 	 * calculations.
 	 * Ex: 5 + 3 = 8; -> 2 + result = 10
 	 * @author kuczynskij
+	 * @param num - number of history result
 	 */
-	public int reuse(){
-		if (history.size() > 0){
-			return history.get(history.size()).getAns();
+	public int reuse(int num){
+		if (history.size() > 0 && num > 0){
+			return history.get(history.size() - num).getAns();
 		}else{
 			//apply identity property
 			//apply 0 to sub or add
