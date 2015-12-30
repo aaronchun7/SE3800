@@ -253,7 +253,6 @@ public class Calculator {
 			System.out.println("Error: History may not have been "
 					+ "cleared.");
 		}
-		getUserInput();
 	}
 	
 	/**

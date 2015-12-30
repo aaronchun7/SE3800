@@ -35,7 +35,7 @@ public class Calculator {
 		System.out.println("Welcome to Team Wolfpack's fantastic "
 				+ "terminal calculator!");
 		System.out.println("Supported commands: add, sub, mult, div,"
-				+ " hist, clear, reuse, wumbo");
+				+ " hist, clear, reuse, wombo");
 		in = new Scanner(System.in);
 		getUserInput();
 	}
@@ -67,12 +67,9 @@ public class Calculator {
 				clear();
 				break;
 			case "reuse":
-				/* 
-				 * TODO don't need because will be used in the array
-				 * 		of integers passed in.
-				 */
+				//TODO
 				break;
-			case "wumbo":
+			case "wombo":
 				//TODO
 			break;
 			case "help":
@@ -152,6 +149,7 @@ public class Calculator {
 		List<Integer> list = getIntegers();
 		if(list != null){
 			calc = new Calculation("sub");
+			list = getIntegers();
 			calc.setInput(list);
 			int dif = list.get(0);
 			for(int i = 1; i < list.size(); i++){
@@ -198,6 +196,7 @@ public class Calculator {
 		boolean divZero = false;
 		if(list != null){
 			calc = new Calculation("div");
+			list = getIntegers();
 			calc.setInput(list);
 			int quot = list.get(0);
 			for(int i = 1; i < list.size(); i++){
@@ -228,14 +227,12 @@ public class Calculator {
 		int h = history.size();
 		if(h > 0){
 			System.out.println("Printing out calculation history.");
-			for(int i = 0; i < h ;++i){
-				System.out.println(
-						(i + 1) + " | " + history.get(h-(1 + i)));
+			for(int i = 0; i <= h ;++i){
+				System.out.println(history.get(h-i));
 			}
 		}else{
 			System.out.println("There is no history to display.");
 		}
-		getUserInput();
 	}
 	
 	/**
@@ -253,7 +250,6 @@ public class Calculator {
 			System.out.println("Error: History may not have been "
 					+ "cleared.");
 		}
-		getUserInput();
 	}
 	
 	/**
@@ -291,7 +287,7 @@ public class Calculator {
 	 * User Story #8
 	 * @author chuna
 	 */
-	public void wumbo(){
+	public void wombo(){
 		//TODO
 	}
 }

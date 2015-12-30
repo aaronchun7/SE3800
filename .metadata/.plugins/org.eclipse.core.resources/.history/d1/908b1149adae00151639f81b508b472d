@@ -228,14 +228,12 @@ public class Calculator {
 		int h = history.size();
 		if(h > 0){
 			System.out.println("Printing out calculation history.");
-			for(int i = 0; i < h ;++i){
-				System.out.println(
-						(i + 1) + " | " + history.get(h-(1 + i)));
+			for(int i = 0; i <= h ;++i){
+				System.out.println(history.get(h-i));
 			}
 		}else{
 			System.out.println("There is no history to display.");
 		}
-		getUserInput();
 	}
 	
 	/**
@@ -253,7 +251,6 @@ public class Calculator {
 			System.out.println("Error: History may not have been "
 					+ "cleared.");
 		}
-		getUserInput();
 	}
 	
 	/**
