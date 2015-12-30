@@ -49,16 +49,7 @@ public class Calculator {
 		List<Integer> list;
 		switch(cmd){
 			case "add":
-				calc = new Calculation("add");
-				list = getIntegers();
-				calc.setInput(list);
-				if (list != null){
-					int sum = add(list);
-					System.out.println("The sum is: " + sum);
-					calc.setAns(sum);
-				}
-				history.add(calc);
-				getUserInput();
+				add();
 				break;
 			case "sub":
 				calc = new Calculation("sub");
@@ -73,16 +64,7 @@ public class Calculator {
 				getUserInput();
 				break;
 			case "mult":
-				calc = new Calculation("mult");
-				list = getIntegers();
-				calc.setInput(list);
-				if (list != null){
-					int product = mult(list);
-					System.out.println("The product is: " + product);
-					calc.setAns(product);
-				}
-				history.add(calc);
-				getUserInput();
+				mult();
 				break;
 			case "div":
 				calc = new Calculation("div");
@@ -162,12 +144,20 @@ public class Calculator {
 	 * @param l - list of integers
 	 * @return non-negative sum
 	 */
-	public static int add(List<Integer> l){
-		int sum = 0;
-		for(Integer i : l){
-			sum += i;
+	public static void add(){
+		List<Integer> list = getIntegers();
+		if (list != null){
+			calc = new Calculation("add");
+			calc.setInput(list);
+			int sum = 0;
+			for(Integer i : list){
+				sum += i;
+			}
+			System.out.println("The sum is: " + sum);
+			calc.setAns(sum);
 		}
-		return sum;
+		history.add(calc);
+		getUserInput();
 	}
 	
 	/**
@@ -190,12 +180,20 @@ public class Calculator {
 	 * @param l - list of integers
 	 * @return
 	 */
-	public static int mult(List<Integer> l){
-		int product = 1;
-		for(Integer i : l){
-			product *= i;
+	public static void mult(){
+		List<Integer> list = getIntegers();
+		if (list != null){
+			calc = new Calculation("mult");
+			calc.setInput(list);
+			int product = 1;
+			for(Integer i : list){
+				product *= i;
+			}
+			System.out.println("The product is: " + product);
+			calc.setAns(product);
 		}
-		return product;
+		history.add(calc);
+		getUserInput();
 	}
 	
 	/**

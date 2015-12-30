@@ -52,6 +52,16 @@ public class Calculator {
 				add();
 				break;
 			case "sub":
+//				calc = new Calculation("sub");
+//				list = getIntegers();
+//				calc.setInput(list);
+//				if(list != null){
+//					int dif = sub(list);
+//					System.out.println("The difference is: " + dif);
+//					calc.setAns(dif);
+//				}
+//				history.add(calc);
+//				getUserInput();
 				sub();
 				break;
 			case "mult":
@@ -144,8 +154,8 @@ public class Calculator {
 	
 	/**
 	 * User Story #2
-	 * Subtracts the list of integers
 	 * @author chuna
+	 * @return
 	 */
 	public static void sub(){
 		List<Integer> list = getIntegers();
@@ -189,9 +199,8 @@ public class Calculator {
 	
 	/**
 	 * User Story #4
-	 * Divides the list of integers and uses integer division.
-	 * Has a check for zero division
 	 * @author chuna
+	 * @return
 	 */
 	public static void div(){
 		List<Integer> list = getIntegers();
@@ -231,9 +240,8 @@ public class Calculator {
 	
 	/**
 	 * User Story #6
-	 * Clears the history list by assigning the history attribute to
-	 * a new ArrayList.
 	 * @author chuna
+	 * @return
 	 */
 	public static void clear(){
 		try{
