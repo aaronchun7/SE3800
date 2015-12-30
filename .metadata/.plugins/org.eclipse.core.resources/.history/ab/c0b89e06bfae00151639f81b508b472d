@@ -102,25 +102,15 @@ public class Calculator {
 	private static List<Integer> getIntegers(){
 		List<Integer> l = new ArrayList<Integer>();		
 		String intStr = in.nextLine().trim();
-		// TODO use for debugging, delete later
-//		System.out.println("This is the number input provided: " 
-//			+ intStr);
+		System.out.println("This is the number input provided: " 
+			+ intStr);
         String intStrArr [] = intStr.split(" ");
         try{
         	for (int i = 0; i < intStrArr.length; i++) {
 //	            System.out.println("Item #" + i + " is " +
 //	                    intStrArr[i]); TODO for debugging delete
-        		int val;
-	            if(intStrArr[i].contains("!")){
-	            	//TODO run the reuse method to get the value needed
-	            	int index = Integer.parseInt(
-	            			intStrArr[i].substring(1));
-	            	val = reuse(index);
-	            }else{
-	            	val = Integer.parseInt(intStrArr[i]);
-	            }
-        		
-	            l.add(val);
+	            int temp = Integer.parseInt(intStrArr[i]);
+	            l.add(temp);
             }
         }catch(NumberFormatException nfe){
             System.out.println("There was an error in the numbers " 
@@ -274,23 +264,14 @@ public class Calculator {
 	 * @author kuczynskij
 	 * @param num - number of history result
 	 */
-	public static int reuse(int num){
+	public int reuse(int num){
 		if (history.size() > 0 && num > 0){
 			return history.get(history.size() - num).getAns();
 		}else{
 			//apply identity property
 			//apply 0 to sub or add
 			//apply 1 to mult or div
-			
-			/* 
-			 * TODO might not work the way we have things set up as 
-			 * of now since right now I don't add the Calculation
-			 * to the history until the calculation is actually done
-			 * we may need to change it so we pass the command 
-			 * attribute to the methods so when it gets to this
-			 * point we can correctly decide which property we use
-			 */
-			String cmd = history.get(history.size() - 1).getCmd();
+			String cmd = history.get(history.size()).getCmd();
 			switch(cmd){
 				case "add":
 					return 0;
