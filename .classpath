@@ -2,5 +2,6 @@
 <classpath>
 	<classpathentry kind="src" path="calculator/src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/Jim Kuczynski/Dropbox/MSOE/MSOE 2015 Winter/SE3800 - SE Process 2/Exercise/team-wolfpack/testng.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

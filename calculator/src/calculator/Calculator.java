@@ -15,7 +15,8 @@ public class Calculator {
 	//Scanner object to get user input.
 	private static Scanner in;
 	
-	private static ArrayList<Calculation> history = new ArrayList<>();
+	private static ArrayList<Calculation> history 
+		= new ArrayList<>();
 	
 	private static Calculation calc;
 	
@@ -46,7 +47,6 @@ public class Calculator {
 	private static void getUserInput(){
 		System.out.print("Enter command: ");
 		String cmd = in.next();
-		List<Integer> list;
 		switch(cmd){
 			case "add":
 				add();
@@ -61,7 +61,7 @@ public class Calculator {
 				div();
 				break;
 			case "hist":
-				//TODO
+				hist();
 				break;
 			case "clear":
 				clear();
@@ -80,10 +80,8 @@ public class Calculator {
 				System.exit(0);
 				break;
 			default:
-				/* 
-				 * Clear the buffer of any extra things input 
-				 * after the incorrect command.
-				 */
+				 //Clear the buffer of any extra things input 
+				 //after the incorrect command.
 				in.nextLine();
 				System.out.println("Woops, looks like you inputed an"
 						+ " invalid command.");
@@ -226,7 +224,15 @@ public class Calculator {
 	 * @author kuczynskij
 	 */
 	public static void hist(){
-		//TODO
+		int h = history.size();
+		if(h > 0){
+			System.out.println("Printing out calculation history.");
+			for(int i = 0; i <= h ;++i){
+				System.out.println(history.get(h-i));
+			}
+		}else{
+			System.out.println("There is no history to display.");
+		}
 	}
 	
 	/**
@@ -253,8 +259,27 @@ public class Calculator {
 	 * Ex: 5 + 3 = 8; -> 2 + result = 10
 	 * @author kuczynskij
 	 */
-	public void reuse(){
-		//TODO
+	public int reuse(){
+		if (history.size() > 0){
+			return history.get(history.size()).getAns();
+		}else{
+			//apply identity property
+			//apply 0 to sub or add
+			//apply 1 to mult or div
+			String cmd = history.get(history.size()).getCmd();
+			switch(cmd){
+				case "add":
+					return 0;
+				case "sub":
+					return 0;
+				case "mult":
+					return 1;
+				case "div":
+					return 1;
+				default:
+					return 0;
+			}
+		}
 	}
 	
 	/**
