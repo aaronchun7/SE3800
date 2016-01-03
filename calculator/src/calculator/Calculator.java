@@ -20,6 +20,8 @@ public class Calculator {
 	
 	private static Calculation calc;
 	
+	private static boolean wumbo = false;
+	
 	/**
 	 * Runs the program.
 	 * @param args
@@ -35,7 +37,7 @@ public class Calculator {
 		System.out.println("Welcome to Team Wolfpack's fantastic "
 				+ "terminal calculator!");
 		System.out.println("Supported commands: add, sub, mult, div,"
-				+ " hist, clear, reuse, wumbo");
+				+ " hist, clear, reuse, wumbo, help");
 		in = new Scanner(System.in);
 		getUserInput();
 	}
@@ -49,16 +51,28 @@ public class Calculator {
 		String cmd = in.next();
 		switch(cmd){
 			case "add":
-				add();
+				if(!wumbo)
+					add();
+				else
+					sub();
 				break;
 			case "sub":
-				sub();
+				if(!wumbo)
+					sub();
+				else
+					add();
 				break;
 			case "mult":
-				mult();
+				if(!wumbo)
+					mult();
+				else
+					div();
 				break;
 			case "div":
-				div();
+				if(!wumbo)
+					div();
+				else
+					mult();
 				break;
 			case "hist":
 				hist();
@@ -66,15 +80,9 @@ public class Calculator {
 			case "clear":
 				clear();
 				break;
-			case "reuse":
-				/* 
-				 * TODO don't need because will be used in the array
-				 * 		of integers passed in.
-				 */
-				break;
 			case "wumbo":
-				//TODO
-			break;
+				wumbo();
+				break;
 			case "help":
 				help();
 				break;
@@ -102,17 +110,11 @@ public class Calculator {
 	private static List<Integer> getIntegers(Calculation c){
 		List<Integer> l = new ArrayList<Integer>();		
 		String intStr = in.nextLine().trim();
-		// TODO use for debugging, delete later
-//		System.out.println("This is the number input provided: " 
-//			+ intStr);
         String intStrArr [] = intStr.split(" ");
         try{
         	for (int i = 0; i < intStrArr.length; i++) {
-//	            System.out.println("Item #" + i + " is " +
-//	                    intStrArr[i]); TODO for debugging delete
         		int val;
 	            if(intStrArr[i].contains("!")){
-	            	//TODO run the reuse method to get the value needed
 	            	int index = Integer.parseInt(
 	            			intStrArr[i].substring(1));
 	            	val = reuse(index, c);
@@ -299,9 +301,20 @@ public class Calculator {
 	
 	/**
 	 * User Story #8
+	 * If true, swaps add with sub and swaps mult with div.
 	 * @author chuna
 	 */
-	public void wumbo(){
-		//TODO
+	public static void wumbo(){
+		if (!wumbo){
+			wumbo = true;
+			System.out.println("I wumbo, you wumbo, he, she, me, "
+					+ "wumbo. Wumbo; wumboing; we'll have thee "
+					+ "wumbo; wumborama; wumbology, the study of "
+					+ "wumbo! It's first grade stuff, User!");
+		}else{
+			wumbo = false;
+			System.out.println("Mini-mode.");
+		}
+		getUserInput();
 	}
 }
