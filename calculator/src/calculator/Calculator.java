@@ -15,7 +15,7 @@ public class Calculator {
 	//Scanner object to get user input.
 	private static Scanner in;
 	
-	private static ArrayList<Calculation> history 
+	public static ArrayList<Calculation> history 
 		= new ArrayList<>();
 	
 	private static Calculation calc;
@@ -52,7 +52,7 @@ public class Calculator {
 		switch(cmd){
 			case "add":
 				if(!wumbo)
-					add();
+					add(null);
 				else
 					sub();
 				break;
@@ -60,7 +60,7 @@ public class Calculator {
 				if(!wumbo)
 					sub();
 				else
-					add();
+					add(null);
 				break;
 			case "mult":
 				if(!wumbo)
@@ -98,7 +98,8 @@ public class Calculator {
 						+ " invalid command.");
 				getUserInput();
 				break;
-		}	
+		}
+		getUserInput();
 	}
 	
 	/**
@@ -136,15 +137,16 @@ public class Calculator {
 	 * User Story #1
 	 * Adds the a list of positive Integers.
 	 * @author kuczynskij
-	 * @param l - list of integers
+	 * @param list - list of integers
 	 * @return non-negative sum
 	 */
-	public static void add(){
+	public static int add(List<Integer> list){
 		calc = new Calculation("add");
-		List<Integer> list = getIntegers(calc);
+		int sum = 0;
+		if (list == null)
+			list = getIntegers(calc);
 		if (list != null){
 			calc.setInput(list);
-			int sum = 0;
 			for(Integer i : list){
 				sum += i;
 			}
@@ -152,7 +154,7 @@ public class Calculator {
 			calc.setAns(sum);
 		}
 		history.add(calc);
-		getUserInput();
+		return sum;
 	}
 	
 	/**
@@ -160,12 +162,13 @@ public class Calculator {
 	 * Subtracts the list of integers
 	 * @author chuna
 	 */
-	public static void sub(){
+	public static int sub(){
 		calc = new Calculation("sub");
+		int dif = 0;
 		List<Integer> list = getIntegers(calc);
 		if(list != null){
 			calc.setInput(list);
-			int dif = list.get(0);
+			dif = list.get(0);
 			for(int i = 1; i < list.size(); i++){
 				dif -= list.get(i);
 			}
@@ -173,7 +176,7 @@ public class Calculator {
 			calc.setAns(dif);
 		}
 		history.add(calc);
-		getUserInput();
+		return dif;
 	}
 	
 	/**
@@ -183,12 +186,12 @@ public class Calculator {
 	 * @param l - list of integers
 	 * @return
 	 */
-	public static void mult(){
+	public static int mult(){
 		calc = new Calculation("mult");
+		int product = 1;
 		List<Integer> list = getIntegers(calc);
 		if (list != null){
 			calc.setInput(list);
-			int product = 1;
 			for(Integer i : list){
 				product *= i;
 			}
@@ -196,7 +199,7 @@ public class Calculator {
 			calc.setAns(product);
 		}
 		history.add(calc);
-		getUserInput();
+		return product;
 	}
 	
 	/**
@@ -204,14 +207,16 @@ public class Calculator {
 	 * Divides the list of integers and uses integer division.
 	 * Has a check for zero division
 	 * @author chuna
+	 * @throws Exception 
 	 */
-	public static void div(){
+	public static int div(){
 		calc = new Calculation("div");
+		int quot = 0;
 		List<Integer> list = getIntegers(calc);
 		boolean divZero = false;
 		if(list != null){
 			calc.setInput(list);
-			int quot = list.get(0);
+			quot = list.get(0);
 			for(int i = 1; i < list.size(); i++){
 				if(list.get(i) != 0){
 					quot /= list.get(i);
@@ -228,7 +233,7 @@ public class Calculator {
 			calc.setAns(quot);
 		}
 		history.add(calc);
-		getUserInput();
+		return quot;
 	}
 	
 	/**
@@ -247,7 +252,6 @@ public class Calculator {
 		}else{
 			System.out.println("There is no history to display.");
 		}
-		getUserInput();
 	}
 	
 	/**
@@ -265,7 +269,6 @@ public class Calculator {
 			System.out.println("Error: History may not have been "
 					+ "cleared.");
 		}
-		getUserInput();
 	}
 	
 	/**
@@ -315,6 +318,5 @@ public class Calculator {
 			wumbo = false;
 			System.out.println("Mini-mode.");
 		}
-		getUserInput();
 	}
 }
