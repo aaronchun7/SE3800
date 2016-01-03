@@ -99,7 +99,7 @@ public class Calculator {
 	 * @author kuczynskij & chuna
 	 * @return l -> List of user inputed integers
 	 */
-	private static List<Integer> getIntegers(){
+	private static List<Integer> getIntegers(Calculation c){
 		List<Integer> l = new ArrayList<Integer>();		
 		String intStr = in.nextLine().trim();
 		// TODO use for debugging, delete later
@@ -115,7 +115,7 @@ public class Calculator {
 	            	//TODO run the reuse method to get the value needed
 	            	int index = Integer.parseInt(
 	            			intStrArr[i].substring(1));
-	            	val = reuse(index);
+	            	val = reuse(index, c);
 	            }else{
 	            	val = Integer.parseInt(intStrArr[i]);
 	            }
@@ -138,9 +138,9 @@ public class Calculator {
 	 * @return non-negative sum
 	 */
 	public static void add(){
-		List<Integer> list = getIntegers();
+		calc = new Calculation("add");
+		List<Integer> list = getIntegers(calc);
 		if (list != null){
-			calc = new Calculation("add");
 			calc.setInput(list);
 			int sum = 0;
 			for(Integer i : list){
@@ -159,9 +159,9 @@ public class Calculator {
 	 * @author chuna
 	 */
 	public static void sub(){
-		List<Integer> list = getIntegers();
+		calc = new Calculation("sub");
+		List<Integer> list = getIntegers(calc);
 		if(list != null){
-			calc = new Calculation("sub");
 			calc.setInput(list);
 			int dif = list.get(0);
 			for(int i = 1; i < list.size(); i++){
@@ -182,9 +182,9 @@ public class Calculator {
 	 * @return
 	 */
 	public static void mult(){
-		List<Integer> list = getIntegers();
+		calc = new Calculation("mult");
+		List<Integer> list = getIntegers(calc);
 		if (list != null){
-			calc = new Calculation("mult");
 			calc.setInput(list);
 			int product = 1;
 			for(Integer i : list){
@@ -204,10 +204,10 @@ public class Calculator {
 	 * @author chuna
 	 */
 	public static void div(){
-		List<Integer> list = getIntegers();
+		calc = new Calculation("div");
+		List<Integer> list = getIntegers(calc);
 		boolean divZero = false;
 		if(list != null){
-			calc = new Calculation("div");
 			calc.setInput(list);
 			int quot = list.get(0);
 			for(int i = 1; i < list.size(); i++){
@@ -274,23 +274,14 @@ public class Calculator {
 	 * @author kuczynskij
 	 * @param num - number of history result
 	 */
-	public static int reuse(int num){
-		if (history.size() > 0 && num > 0){
+	public static int reuse(int num, Calculation c){
+		if (history.size() > 0 && num > 0 && history.size() > num){
 			return history.get(history.size() - num).getAns();
 		}else{
 			//apply identity property
 			//apply 0 to sub or add
 			//apply 1 to mult or div
-			
-			/* 
-			 * TODO might not work the way we have things set up as 
-			 * of now since right now I don't add the Calculation
-			 * to the history until the calculation is actually done
-			 * we may need to change it so we pass the command 
-			 * attribute to the methods so when it gets to this
-			 * point we can correctly decide which property we use
-			 */
-			String cmd = history.get(history.size() - 1).getCmd();
+			String cmd = c.getCmd();
 			switch(cmd){
 				case "add":
 					return 0;
