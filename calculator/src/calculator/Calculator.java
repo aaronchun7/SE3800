@@ -138,11 +138,10 @@ public class Calculator {
 	 * Adds the a list of positive Integers.
 	 * @author kuczynskij
 	 * @param list - list of integers
-	 * @return non-negative sum
+	 * @return sum
 	 */
 	public static int add(List<Integer> list){
 		calc = new Calculation("add");
-		//int sum = 0;
 		double sum = 0;
 		if (list == null)
 			list = getIntegers(calc);
@@ -168,6 +167,8 @@ public class Calculator {
 	 * User Story #2
 	 * Subtracts the list of integers
 	 * @author chuna
+	 * @param l - list of integers
+	 * @return difference
 	 */
 	public static int sub(List<Integer> list){
 		calc = new Calculation("sub");
@@ -192,23 +193,29 @@ public class Calculator {
 	 * Multiples the a list of positive Integers.
 	 * @author kuczynskij
 	 * @param l - list of integers
-	 * @return
+	 * @return product
 	 */
 	public static int mult(List<Integer> list){
 		calc = new Calculation("mult");
-		int product = 1;
+		double product = 1;
 		if (list == null)
 			list = getIntegers(calc);
 		if (list != null){
 			calc.setInput(list);
 			for(Integer i : list){
-				product *= i;
+				if(product*i >= Integer.MAX_VALUE){
+					product = Integer.MAX_VALUE;
+				}else if(product*i <= Integer.MIN_VALUE){
+					product = Integer.MIN_VALUE;
+				}else{
+					product *= i;
+				}
 			}
-			System.out.println("The product is: " + product);
-			calc.setAns(product);
+			System.out.println("The product is: " + (int)product);
+			calc.setAns((int)product);
 		}
 		history.add(calc);
-		return product;
+		return (int)product;
 	}
 	
 	/**
