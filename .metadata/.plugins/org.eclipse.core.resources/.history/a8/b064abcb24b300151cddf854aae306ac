@@ -172,36 +172,20 @@ public class Calculator {
 	 */
 	public static int sub(List<Integer> list){
 		calc = new Calculation("sub");
-		double dif = 0;
+		int dif = 0;
 		if (list == null)
 			list = getIntegers(calc);
 		if(list != null){
 			calc.setInput(list);
 			dif = list.get(0);
 			for(int i = 1; i < list.size(); i++){
-				if (dif - list.get(i) > Integer.MAX_VALUE){
-					dif = Integer.MAX_VALUE;
-					System.out.println("During calculations, the "
-							+ "value exceeded the max value for an "
-							+ "integer. Returning answer as the "
-							+ "MAX_VALUE for integers. (2^31 - 1)");
-					break;
-				}else if (dif - list.get(i) < Integer.MIN_VALUE){
-					dif = Integer.MIN_VALUE;
-					System.out.println("During calculations, the "
-							+ "value exceeded the min value for an "
-							+ "integer. Returning answer as the "
-							+ "MIN_VALUE for integers. (-(2^31))");
-					break;
-				}else{
-					dif -= list.get(i);
-				}
+				dif -= list.get(i);
 			}
-			System.out.println("The difference is: " + (int)dif);
-			calc.setAns((int)dif);
+			System.out.println("The difference is: " + dif);
+			calc.setAns(dif);
 		}
 		history.add(calc);
-		return (int)dif;
+		return dif;
 	}
 	
 	/**

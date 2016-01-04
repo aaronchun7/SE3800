@@ -194,7 +194,7 @@ public class Calculator {
 							+ "MIN_VALUE for integers. (-(2^31))");
 					break;
 				}else{
-					dif -= list.get(i);
+					dif += list.get(i); //TODO fix bug
 				}
 			}
 			System.out.println("The difference is: " + (int)dif);

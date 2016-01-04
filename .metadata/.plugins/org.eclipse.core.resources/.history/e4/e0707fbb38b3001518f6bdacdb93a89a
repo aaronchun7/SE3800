@@ -171,6 +171,7 @@ public class Calculator {
 	 * @return difference
 	 */
 	public static int sub(List<Integer> list){
+		breakEverything;//TODO get rid of later
 		calc = new Calculation("sub");
 		double dif = 0;
 		if (list == null)
