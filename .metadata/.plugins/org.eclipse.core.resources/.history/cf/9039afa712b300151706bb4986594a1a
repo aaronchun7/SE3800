@@ -37,8 +37,6 @@ public class testCalculator {
 		assert(Calculator.add(l) == 6);
 		l = new ArrayList<Integer>(){{add(Integer.MAX_VALUE);add(1);}};
 		assert(Calculator.add(l) == Integer.MAX_VALUE);
-		l = new ArrayList<Integer>(){{add(Integer.MIN_VALUE);add(-1);}};
-		assert(Calculator.add(l) == Integer.MIN_VALUE);
 		l = new ArrayList<Integer>(){{add(4);add(-5);add(6);}};
 		assert(Calculator.add(l) == 5);
 	}

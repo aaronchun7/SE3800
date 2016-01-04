@@ -36,8 +36,6 @@ public class testCalculator {
 		List <Integer> l = new ArrayList<Integer>(){{add(1);add(2);add(3);}};
 		assert(Calculator.add(l) == 6);
 		l = new ArrayList<Integer>(){{add(Integer.MAX_VALUE);add(1);}};
-		assert(Calculator.add(l) == Integer.MAX_VALUE);
-		l = new ArrayList<Integer>(){{add(Integer.MIN_VALUE);add(-1);}};
 		assert(Calculator.add(l) == Integer.MIN_VALUE);
 		l = new ArrayList<Integer>(){{add(4);add(-5);add(6);}};
 		assert(Calculator.add(l) == 5);
@@ -49,7 +47,12 @@ public class testCalculator {
 	 */
 	@Test
 	public void testSub(){
-		
+		List <Integer> l = new ArrayList<Integer>(){{add(1);add(2);add(3);}};
+		assert(Calculator.sub(l) == -4);
+		l = new ArrayList<Integer>(){{add(Integer.MIN_VALUE);add(1);}};
+		assert(Calculator.sub(l) == Integer.MIN_VALUE);
+		l = new ArrayList<Integer>(){{add(4);add(-5);add(6);}};
+		assert(Calculator.sub(l) == 3);
 	}
 
 	/**
@@ -58,14 +61,7 @@ public class testCalculator {
 	 */
 	@Test
 	public void testMult(){
-		List <Integer> l = new ArrayList<Integer>(){{add(4);add(2);add(3);}};
-		assert(Calculator.mult(l) == 24);
-		l = new ArrayList<Integer>(){{add(Integer.MIN_VALUE);add(2);}};
-		assert(Calculator.mult(l) == Integer.MIN_VALUE);
-		l = new ArrayList<Integer>(){{add(Integer.MAX_VALUE);add(2);}};
-		assert(Calculator.mult(l) == Integer.MAX_VALUE);
- 		l = new ArrayList<Integer>(){{add(4);add(-5);add(6);}};
-		assert(Calculator.mult(l) == 3);
+
 	}
 
 	/**
