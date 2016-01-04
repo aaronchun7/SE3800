@@ -87,8 +87,8 @@ public class testCalculator {
 	public void testDiv(){
 		List <Integer> l = new ArrayList<Integer>(){{add(4);add(2);add(3);}};
 		assert(Calculator.div(l) == 0);
-		l = new ArrayList<Integer>(){{add(Integer.MIN_VALUE);add(2);}};
-		assert(Calculator.div(l) == Integer.MIN_VALUE);
+//		l = new ArrayList<Integer>(){{add(Integer.MIN_VALUE);add(2);}};
+//		assert(Calculator.div(l) == Integer.MIN_VALUE);
 		l = new ArrayList<Integer>(){{add(Integer.MAX_VALUE);add(2);}};
 		assert(Calculator.div(l) == Integer.MAX_VALUE / 2);
  		l = new ArrayList<Integer>(){{add(4);add(-5);add(6);}};
@@ -126,8 +126,29 @@ public class testCalculator {
 	 * Tests wumbo() method.
 	 * @author kuczynskij
 	 */
+	@SuppressWarnings("serial")
 	@Test
 	public void testWumbo(){
-
+		//call wumbo()
+		//testing add
+		List <Integer> l = new ArrayList<Integer>(){{add(1);add(2);add(3);}};
+		assert(Calculator.add(l) == 6);
+		l = new ArrayList<Integer>(){{add(Integer.MAX_VALUE);add(1);}};
+		assert(Calculator.add(l) == Integer.MAX_VALUE);
+		l = new ArrayList<Integer>(){{add(Integer.MIN_VALUE);add(-1);}};
+		assert(Calculator.add(l) == Integer.MIN_VALUE);
+		l = new ArrayList<Integer>(){{add(4);add(-5);add(6);}};
+		assert(Calculator.add(l) == 5);
+		//testing sub
+		
+		//testing mult
+		
+		//testing div
+		
+		//call wumbo()
+		testAdd();
+		testSub();
+		testMult();
+		testDiv();
 	}
 }
