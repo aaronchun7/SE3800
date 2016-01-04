@@ -201,7 +201,7 @@ public class Calculator {
 			calc.setAns((int)dif);
 		}
 		history.add(calc);
-		return (int)dif;
+		return dif;
 	}
 	
 	/**
