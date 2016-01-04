@@ -352,4 +352,13 @@ public class Calculator {
 			System.out.println("Mini-mode.");
 		}
 	}
+	
+	/**
+	 * Getter method for the boolean wumbo.
+	 * @author kuczynskij
+	 * @return wumbo
+	 */
+	public static boolean getWumbo(){
+		return wumbo;
+	}
 }
