@@ -1,0 +1,69 @@
+package calculator;
+
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+import static org.testng.Assert.*;
+
+public class testCalculator {
+
+	/**
+	 * The inputs to be tested for invalid constructors.
+	 * @return
+	 */
+	@DataProvider(name = "invalidConstructorTests")
+	public static Object[][] createInvalidConstructorData(){
+		return new Object [][] {
+				//TODO Edit because this is just example code
+				{"Janice Middle Tester", new Integer(0)},
+				{"J Tester", iCommissionCalculator.PROBATIONARY},
+				{"Ja Tester", iCommissionCalculator.PROBATIONARY},
+				{"Jan Te", iCommissionCalculator.EXPERIENCED},
+				{"Janice", iCommissionCalculator.EXPERIENCED},
+				{"Janice Tester", new Integer(2)},
+				{"Janice Tester", new Integer(-1)}};
+	}
+	
+	/**
+	 * Testing invalid constructor parameters.
+	 * 
+	 * Author: Aaron Chun
+	 * @param employeeName		Employees first and last name. Each length of
+	 * 							at least 3 characters
+	 * @param employeeExperience	0 (iCommissionCalculator.PROBATIONARY)
+	 * 								1 (iCommissionCalculator.EXPERIENCED)
+	 * @throws Exception	Should be thrown if there is an invalid name or
+	 * 						employee experience.
+	 */
+	@Test(dataProvider = "invalidConstructorTests",
+			expectedExceptions=Exception.class)
+	//TODO Edit because this is just example code
+	public void testInvalidMSOECommissionCalculator(String employeeName,
+			int employeeExperience) throws Exception{
+		commission = new MSOECommissionCalculator(employeeName, 
+				employeeExperience);
+	}
+	
+	/**
+	 * Testing valid cases for addSale method
+	 * Author: Aaron Chun
+	 * @throws Exception	Should throw exceptions for invalid saleType and
+	 * 						dollarAmount
+	 */
+	@Test
+	public void testAddSale() throws Exception{
+		//TODO Edit because this is just example code
+		commission = new MSOECommissionCalculator("Janet Tester",
+				iCommissionCalculator.PROBATIONARY);
+		commission.addSale(iCommissionCalculator.BASIC_ITEM, new Double(0));
+		assert(commission.transactions.get(0).getTransactionType() ==
+				iCommissionCalculator.BASIC_ITEM);
+		assert(commission.transactions.get(0).getTransactionAmount() ==
+				0.00);
+		commission.addSale(iCommissionCalculator.MAINTENANCE_ITEM,
+				new Double(0));
+		assert(commission.transactions.get(1).getTransactionType() ==
+				iCommissionCalculator.MAINTENANCE_ITEM);
+		assert(commission.transactions.get(1).getTransactionAmount() ==
+				0.00);
+	}
+}

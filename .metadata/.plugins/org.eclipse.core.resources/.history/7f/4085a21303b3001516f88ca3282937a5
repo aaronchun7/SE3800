@@ -165,8 +165,7 @@ public class Calculator {
 	public static int sub(List<Integer> list){
 		calc = new Calculation("sub");
 		int dif = 0;
-		if (list == null)
-			list = getIntegers(calc);
+		List<Integer> list = getIntegers(calc);
 		if(list != null){
 			calc.setInput(list);
 			dif = list.get(0);
@@ -190,8 +189,7 @@ public class Calculator {
 	public static int mult(List<Integer> list){
 		calc = new Calculation("mult");
 		int product = 1;
-		if (list == null)
-			list = getIntegers(calc);
+		List<Integer> list = getIntegers(calc);
 		if (list != null){
 			calc.setInput(list);
 			for(Integer i : list){
@@ -214,8 +212,7 @@ public class Calculator {
 	public static int div(List<Integer> list){
 		calc = new Calculation("div");
 		int quot = 0;
-		if (list == null)
-			list = getIntegers(calc);
+		List<Integer> list = getIntegers(calc);
 		boolean divZero = false;
 		if(list != null){
 			calc.setInput(list);

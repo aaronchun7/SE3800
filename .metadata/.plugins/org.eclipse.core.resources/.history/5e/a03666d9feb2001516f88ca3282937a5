@@ -15,7 +15,7 @@ public class Calculator {
 	//Scanner object to get user input.
 	private static Scanner in;
 	
-	private static ArrayList<Calculation> history 
+	public static ArrayList<Calculation> history 
 		= new ArrayList<>();
 	
 	private static Calculation calc;
@@ -54,25 +54,25 @@ public class Calculator {
 				if(!wumbo)
 					add(null);
 				else
-					sub(null);
+					sub();
 				break;
 			case "sub":
 				if(!wumbo)
-					sub(null);
+					sub();
 				else
 					add(null);
 				break;
 			case "mult":
 				if(!wumbo)
-					mult(null);
+					mult();
 				else
-					div(null);
+					div();
 				break;
 			case "div":
 				if(!wumbo)
-					div(null);
+					div();
 				else
-					mult(null);
+					mult();
 				break;
 			case "hist":
 				hist();
@@ -162,11 +162,10 @@ public class Calculator {
 	 * Subtracts the list of integers
 	 * @author chuna
 	 */
-	public static int sub(List<Integer> list){
+	public static int sub(){
 		calc = new Calculation("sub");
 		int dif = 0;
-		if (list == null)
-			list = getIntegers(calc);
+		List<Integer> list = getIntegers(calc);
 		if(list != null){
 			calc.setInput(list);
 			dif = list.get(0);
@@ -187,11 +186,10 @@ public class Calculator {
 	 * @param l - list of integers
 	 * @return
 	 */
-	public static int mult(List<Integer> list){
+	public static int mult(){
 		calc = new Calculation("mult");
 		int product = 1;
-		if (list == null)
-			list = getIntegers(calc);
+		List<Integer> list = getIntegers(calc);
 		if (list != null){
 			calc.setInput(list);
 			for(Integer i : list){
@@ -211,11 +209,10 @@ public class Calculator {
 	 * @author chuna
 	 * @throws Exception 
 	 */
-	public static int div(List<Integer> list){
+	public static int div(){
 		calc = new Calculation("div");
 		int quot = 0;
-		if (list == null)
-			list = getIntegers(calc);
+		List<Integer> list = getIntegers(calc);
 		boolean divZero = false;
 		if(list != null){
 			calc.setInput(list);
