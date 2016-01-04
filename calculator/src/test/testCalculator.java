@@ -31,6 +31,7 @@ public class testCalculator {
 	 * Tests add() method.
 	 * @author chuna
 	 */
+	@SuppressWarnings("serial")
 	@Test//(dataProvider = "validNumbers")
 	public void testAdd(){
 		List <Integer> l = new ArrayList<Integer>(){{add(1);add(2);add(3);}};
@@ -47,6 +48,7 @@ public class testCalculator {
 	 * Tests sub() method.
 	 * @author kuczynskij
 	 */
+	@SuppressWarnings("serial")
 	@Test
 	public void testSub(){
 		List <Integer> l = new ArrayList<Integer>(){{add(1);add(2);add(3);}};
@@ -63,6 +65,7 @@ public class testCalculator {
 	 * Tests mult() method.
 	 * @author chuna
 	 */
+	@SuppressWarnings("serial")
 	@Test
 	public void testMult(){
 		List <Integer> l = new ArrayList<Integer>(){{add(4);add(2);add(3);}};
@@ -79,6 +82,7 @@ public class testCalculator {
 	 * Tests div() method.
 	 * @author kuczynskij
 	 */
+	@SuppressWarnings("serial")
 	@Test
 	public void testDiv(){
 		List <Integer> l = new ArrayList<Integer>(){{add(4);add(2);add(3);}};
