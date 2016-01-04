@@ -65,7 +65,7 @@ public class testCalculator {
 		l = new ArrayList<Integer>(){{add(Integer.MAX_VALUE);add(2);}};
 		assert(Calculator.mult(l) == Integer.MAX_VALUE);
  		l = new ArrayList<Integer>(){{add(4);add(-5);add(6);}};
-		assert(Calculator.mult(l) == -120);
+		assert(Calculator.mult(l) == 3);
 	}
 
 	/**
@@ -83,7 +83,7 @@ public class testCalculator {
 	 */
 	@Test
 	public void testHist(){
-		
+
 	}
 
 	/**
@@ -101,10 +101,7 @@ public class testCalculator {
 	 */
 	@Test
 	public void testReuse(){
-		List <Integer> l = new ArrayList<Integer>(){{add(1);add(2);add(3);}};
-		assert(Calculator.add(l) == 6);
-		l = new ArrayList<Integer>(){{add(1);add(2);add(3);}};
-		assert(Calculator.add(l) == 6);
+
 	}
 
 	/**

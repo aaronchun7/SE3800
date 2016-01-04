@@ -65,7 +65,7 @@ public class testCalculator {
 		l = new ArrayList<Integer>(){{add(Integer.MAX_VALUE);add(2);}};
 		assert(Calculator.mult(l) == Integer.MAX_VALUE);
  		l = new ArrayList<Integer>(){{add(4);add(-5);add(6);}};
-		assert(Calculator.mult(l) == -120);
+		assert(Calculator.mult(l) == 3);
 	}
 
 	/**
