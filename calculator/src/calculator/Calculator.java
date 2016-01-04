@@ -142,19 +142,26 @@ public class Calculator {
 	 */
 	public static int add(List<Integer> list){
 		calc = new Calculation("add");
-		int sum = 0;
+		//int sum = 0;
+		double sum = 0;
 		if (list == null)
 			list = getIntegers(calc);
 		if (list != null){
 			calc.setInput(list);
 			for(Integer i : list){
-				sum += i;
+				if (sum+i >= Integer.MAX_VALUE){
+					sum = Integer.MAX_VALUE;
+				}else if (sum+i <= Integer.MIN_VALUE){
+					sum = Integer.MIN_VALUE;
+				}else{
+					sum += i;
+				}
 			}
-			System.out.println("The sum is: " + sum);
-			calc.setAns(sum);
+			System.out.println("The sum is: " + (int)sum);
+			calc.setAns((int)sum);
 		}
 		history.add(calc);
-		return sum;
+		return (int)sum;
 	}
 	
 	/**
