@@ -5,7 +5,7 @@
     <classes>
       <class name="test.testCalculator">
         <methods>
-          <include name="testHist"/>
+          <include name="testDiv"/>
         </methods>
       </class> <!-- test.testCalculator -->
     </classes>

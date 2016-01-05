@@ -24,8 +24,6 @@ public class Calculator {
 	
 	private static boolean programRunning = true;
 	
-	private static boolean zeroDivision = false;
-	
 	/**
 	 * Runs the program.
 	 * @param args
@@ -132,7 +130,7 @@ public class Calculator {
         }catch(NumberFormatException nfe){
             System.out.println("There was an error in the numbers " 
             	+ "provided. Command did not finish executing.");
-//            getUserInput();
+            getUserInput();
         }
 		return l;
 	}
@@ -246,11 +244,11 @@ public class Calculator {
 	 * @throws Exception 
 	 */
 	public static int div(List<Integer> list){
-		zeroDivision = false;
 		calc = new Calculation("div");
 		int quot = 0;
 		if (list == null)
 			list = getIntegers(calc);
+		boolean divZero = false;
 		if(list != null){
 			calc.setInput(list);
 			quot = list.get(0);
@@ -258,18 +256,18 @@ public class Calculator {
 				if(list.get(i) != 0){
 					quot /= list.get(i);
 				}else{
-					zeroDivision = true;
+					divZero = true;
 					break;
 				}
 			}
-			if(zeroDivision){
+			if(divZero){
 				System.out.println("Error: Cannot divide by zero.");
-			}else{
-				System.out.println("The quotient is: " + quot);
-				calc.setAns(quot);
-				history.add(calc);
+				getUserInput();
 			}
+			System.out.println("The quotient is: " + quot);
+			calc.setAns(quot);
 		}
+		history.add(calc);
 		return quot;
 	}
 	
@@ -380,14 +378,5 @@ public class Calculator {
 	 */
 	public static boolean getWumbo(){
 		return wumbo;
-	}
-	
-	/**
-	 * Getter method for the boolean zeroDivision.
-	 * @author chuna
-	 * @return zeroDivision
-	 */
-	public static boolean getZeroDivision(){
-		return zeroDivision;
 	}
 }

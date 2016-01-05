@@ -79,7 +79,6 @@ public class testCalculator {
 		assert(Calculator.div(l) == 0);
 		int histSize = Calculator.getHistory().size();
 		l = new ArrayList<Integer>(){{add(4);add(0);add(6);}};
-		Calculator.div(l);
 		assert(Calculator.getZeroDivision());
 		assert(histSize == Calculator.getHistory().size());
 	}
