@@ -31,9 +31,7 @@ public class Calculator {
 	 * @param args
 	 */
 	public static void main(String [] args){
-		in = new Scanner(System.in);
 		help();
-		getUserInput();
 	}
 	
 	/**
@@ -44,6 +42,8 @@ public class Calculator {
 				+ "terminal calculator!");
 		System.out.println("Supported commands: add, sub, mult, div,"
 				+ " hist, clear, reuse, wumbo, help");
+		in = new Scanner(System.in);
+		getUserInput();
 	}
 	
 	/**

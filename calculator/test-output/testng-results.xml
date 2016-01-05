@@ -2,40 +2,40 @@
 <testng-results skipped="0" failed="0" total="8" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="124" started-at="2016-01-05T08:24:54Z" finished-at="2016-01-05T08:24:54Z">
+  <suite name="Default suite" duration-ms="113" started-at="2016-01-05T15:16:07Z" finished-at="2016-01-05T15:16:07Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="124" started-at="2016-01-05T08:24:54Z" finished-at="2016-01-05T08:24:54Z">
+    <test name="Default test" duration-ms="113" started-at="2016-01-05T15:16:07Z" finished-at="2016-01-05T15:16:07Z">
       <class name="test.testCalculator">
-        <test-method status="PASS" signature="testAdd()[pri:0, instance:test.testCalculator@1ea9f6af]" name="testAdd" duration-ms="37" started-at="2016-01-05T02:24:54Z" finished-at="2016-01-05T02:24:54Z">
+        <test-method status="PASS" signature="testAdd()[pri:0, instance:test.testCalculator@1ea9f6af]" name="testAdd" duration-ms="33" started-at="2016-01-05T09:16:07Z" finished-at="2016-01-05T09:16:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAdd -->
-        <test-method status="PASS" signature="testClear()[pri:0, instance:test.testCalculator@1ea9f6af]" name="testClear" duration-ms="7" started-at="2016-01-05T02:24:54Z" finished-at="2016-01-05T02:24:54Z">
+        <test-method status="PASS" signature="testClear()[pri:0, instance:test.testCalculator@1ea9f6af]" name="testClear" duration-ms="4" started-at="2016-01-05T09:16:07Z" finished-at="2016-01-05T09:16:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testClear -->
-        <test-method status="PASS" signature="testDiv()[pri:0, instance:test.testCalculator@1ea9f6af]" name="testDiv" duration-ms="7" started-at="2016-01-05T02:24:54Z" finished-at="2016-01-05T02:24:54Z">
+        <test-method status="PASS" signature="testDiv()[pri:0, instance:test.testCalculator@1ea9f6af]" name="testDiv" duration-ms="6" started-at="2016-01-05T09:16:07Z" finished-at="2016-01-05T09:16:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDiv -->
-        <test-method status="PASS" signature="testHist()[pri:0, instance:test.testCalculator@1ea9f6af]" name="testHist" duration-ms="3" started-at="2016-01-05T02:24:54Z" finished-at="2016-01-05T02:24:54Z">
+        <test-method status="PASS" signature="testHist()[pri:0, instance:test.testCalculator@1ea9f6af]" name="testHist" duration-ms="4" started-at="2016-01-05T09:16:07Z" finished-at="2016-01-05T09:16:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testHist -->
-        <test-method status="PASS" signature="testMult()[pri:0, instance:test.testCalculator@1ea9f6af]" name="testMult" duration-ms="5" started-at="2016-01-05T02:24:54Z" finished-at="2016-01-05T02:24:54Z">
+        <test-method status="PASS" signature="testMult()[pri:0, instance:test.testCalculator@1ea9f6af]" name="testMult" duration-ms="6" started-at="2016-01-05T09:16:07Z" finished-at="2016-01-05T09:16:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMult -->
-        <test-method status="PASS" signature="testReuse()[pri:0, instance:test.testCalculator@1ea9f6af]" name="testReuse" duration-ms="3" started-at="2016-01-05T02:24:54Z" finished-at="2016-01-05T02:24:54Z">
+        <test-method status="PASS" signature="testReuse()[pri:0, instance:test.testCalculator@1ea9f6af]" name="testReuse" duration-ms="6" started-at="2016-01-05T09:16:07Z" finished-at="2016-01-05T09:16:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testReuse -->
-        <test-method status="PASS" signature="testSub()[pri:0, instance:test.testCalculator@1ea9f6af]" name="testSub" duration-ms="9" started-at="2016-01-05T02:24:54Z" finished-at="2016-01-05T02:24:54Z">
+        <test-method status="PASS" signature="testSub()[pri:0, instance:test.testCalculator@1ea9f6af]" name="testSub" duration-ms="6" started-at="2016-01-05T09:16:07Z" finished-at="2016-01-05T09:16:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSub -->
-        <test-method status="PASS" signature="testWumbo()[pri:0, instance:test.testCalculator@1ea9f6af]" name="testWumbo" duration-ms="1" started-at="2016-01-05T02:24:54Z" finished-at="2016-01-05T02:24:54Z">
+        <test-method status="PASS" signature="testWumbo()[pri:0, instance:test.testCalculator@1ea9f6af]" name="testWumbo" duration-ms="1" started-at="2016-01-05T09:16:07Z" finished-at="2016-01-05T09:16:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testWumbo -->
