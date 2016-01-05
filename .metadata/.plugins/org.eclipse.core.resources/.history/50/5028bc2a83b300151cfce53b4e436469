@@ -77,7 +77,7 @@ public class testCalculator {
 		assert(Calculator.div(l) == Integer.MAX_VALUE);
  		l = new ArrayList<Integer>(){{add(4);add(-5);add(6);}};
 		assert(Calculator.div(l) == 0);
-		l = new ArrayList<Integer>(){{add(4);add(0);add(6);}};
+		l = new ArrayList<Integer>(){{add(4);add(-5);add(6);}};
 		assert(Calculator.div(l) == 0);
 	}
 

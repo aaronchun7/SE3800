@@ -22,8 +22,6 @@ public class Calculator {
 	
 	private static boolean wumbo = false;
 	
-	private static boolean programRunning = true;
-	
 	/**
 	 * Runs the program.
 	 * @param args
@@ -49,59 +47,59 @@ public class Calculator {
 	 * @author kuczynskij
 	 */
 	private static void getUserInput(){
-		while(programRunning){
-			System.out.print("Enter command: ");
-			String cmd = in.next();
-			switch(cmd){
-				case "add":
-					if(!wumbo)
-						add(null);
-					else
-						sub(null);
-					break;
-				case "sub":
-					if(!wumbo)
-						sub(null);
-					else
-						add(null);
-					break;
-				case "mult":
-					if(!wumbo)
-						mult(null);
-					else
-						div(null);
-					break;
-				case "div":
-					if(!wumbo)
-						div(null);
-					else
-						mult(null);
-					break;
-				case "hist":
-					hist();
-					break;
-				case "clear":
-					clear();
-					break;
-				case "wumbo":
-					wumbo();
-					break;
-				case "help":
-					help();
-					break;
-				case "quit":
-					System.out.println("Thanks for using me I guess...");
-					programRunning = false;
-					break;
-				default:
-					 //Clear the buffer of any extra things input 
-					 //after the incorrect command.
-					in.nextLine();
-					System.out.println("Woops, looks like you inputed an"
-							+ " invalid command.");
-					break;
-			}
+		System.out.print("Enter command: ");
+		String cmd = in.next();
+		switch(cmd){
+			case "add":
+				if(!wumbo)
+					add(null);
+				else
+					sub(null);
+				break;
+			case "sub":
+				if(!wumbo)
+					sub(null);
+				else
+					add(null);
+				break;
+			case "mult":
+				if(!wumbo)
+					mult(null);
+				else
+					div(null);
+				break;
+			case "div":
+				if(!wumbo)
+					div(null);
+				else
+					mult(null);
+				break;
+			case "hist":
+				hist();
+				break;
+			case "clear":
+				clear();
+				break;
+			case "wumbo":
+				wumbo();
+				break;
+			case "help":
+				help();
+				break;
+			case "quit":
+				System.out.println("Thanks for using me I guess...");
+				System.exit(0);
+				break;
+			default:
+				 //Clear the buffer of any extra things input 
+				 //after the incorrect command.
+				in.nextLine();
+				System.out.println("Woops, looks like you inputed an"
+						+ " invalid command.");
+				getUserInput();
+				break;
 		}
+		getUserInput();
 	}
 	
 	/**
