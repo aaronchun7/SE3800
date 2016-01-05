@@ -313,7 +313,7 @@ public class Calculator {
 	 * @param num - number of history result
 	 */
 	public static int reuse(int num, Calculation c){
-		if (history.size() > 0 && num > 0 && history.size() > num){
+		if (history.size() > 0 && num > 0 && history.size() >= num){
 			return history.get(history.size() - num).getAns();
 		}else{
 			//apply identity property

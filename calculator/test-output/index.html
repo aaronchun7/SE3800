@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-failed">Default suite</span>
+              <span class="suite-name border-passed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\Aaron\AppData\Local\Temp\testng-eclipse--1617236575\testng-customsuite.xml</span>
+                    <span>C:\Users\Aaron\AppData\Local\Temp\testng-eclipse-2094205384\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,21 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">8 methods, 1 failed,   7 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Default_suite">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="test.testCalculator" hash-for-method="testDiv">testDiv</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Default_suite -->
+                    <span class="method-stats">8 methods,   8 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -121,6 +107,11 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="test.testCalculator" hash-for-method="testClear">testClear</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="test.testCalculator" hash-for-method="testDiv">testDiv</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -160,49 +151,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">test.testCalculator</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testDiv">
-                  </a> <!-- testDiv -->
-                  <span class="method-name">testDiv</span>
-                  <div class="stack-trace">java.lang.AssertionError
-	at test.testCalculator.testDiv(testCalculator.java:91)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-failed -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -221,6 +169,13 @@
                   <a name="testClear">
                   </a> <!-- testClear -->
                   <span class="method-name">testClear</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDiv">
+                  </a> <!-- testDiv -->
+                  <span class="method-name">testDiv</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -263,7 +218,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Aaron\AppData\Local\Temp\testng-eclipse--1617236575\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Aaron\AppData\Local\Temp\testng-eclipse-2094205384\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -316,40 +271,40 @@ data.addRows(8);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testAdd')
 data.setCell(0, 2, 'test.testCalculator')
-data.setCell(0, 3, 23);
+data.setCell(0, 3, 53);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'testMult')
 data.setCell(1, 2, 'test.testCalculator')
-data.setCell(1, 3, 11);
+data.setCell(1, 3, 17);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testSub')
+data.setCell(2, 1, 'testReuse')
 data.setCell(2, 2, 'test.testCalculator')
-data.setCell(2, 3, 11);
+data.setCell(2, 3, 9);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testReuse')
+data.setCell(3, 1, 'testDiv')
 data.setCell(3, 2, 'test.testCalculator')
 data.setCell(3, 3, 8);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testDiv')
+data.setCell(4, 1, 'testSub')
 data.setCell(4, 2, 'test.testCalculator')
-data.setCell(4, 3, 8);
+data.setCell(4, 3, 7);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'testClear')
 data.setCell(5, 2, 'test.testCalculator')
-data.setCell(5, 3, 1);
+data.setCell(5, 3, 4);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'testHist')
+data.setCell(6, 1, 'testWumbo')
 data.setCell(6, 2, 'test.testCalculator')
-data.setCell(6, 3, 1);
+data.setCell(6, 3, 2);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'testWumbo')
+data.setCell(7, 1, 'testHist')
 data.setCell(7, 2, 'test.testCalculator')
-data.setCell(7, 3, 0);
+data.setCell(7, 3, 1);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 63 ms</span>
+              <span class="suite-total-time">Total running time: 101 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -382,33 +337,31 @@ return data;
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testClear</span>
-                <span class="method-start">24 ms</span>
+                <span class="method-start">60 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">testDiv</span>
-                <span class="method-start">25 ms</span>
+                <span class="method-start">68 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testHist</span>
-                <span class="method-start">36 ms</span>
+                <span class="method-start">79 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testMult</span>
-                <span class="method-start">37 ms</span>
+                <span class="method-start">82 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testReuse</span>
-                <span class="method-start">49 ms</span>
+                <span class="method-start">102 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testSub</span>
-                <span class="method-start">58 ms</span>
+                <span class="method-start">115 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testWumbo</span>
-                <span class="method-start">70 ms</span>
+                <span class="method-start">126 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

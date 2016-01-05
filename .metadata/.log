@@ -990,3 +990,542 @@ Caused by: java.lang.NumberFormatException: For input string: "7beta-20130914072
   Class:     org.testng.remote.RemoteTestNG
   Args:      -serport 63164 -d D:\School\Senior\SE3800\team-wolfpack\calculator\test-output C:\Users\Aaron\AppData\Local\Temp\testng-eclipse--1617236575\testng-customsuite.xml
 java -ea -classpath D:\School\Senior\SE3800\team-wolfpack\calculator\bin:D:\School\Senior\SE3800\team-wolfpack\testng.jar org.testng.remote.RemoteTestNG -serport 63164 -d D:\School\Senior\SE3800\team-wolfpack\calculator\test-output C:\Users\Aaron\AppData\Local\Temp\testng-eclipse--1617236575\testng-customsuite.xml
+!SESSION 2016-01-04 23:25:09.521 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_25
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.dsl.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.dsl.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-01-04 23:25:33.268
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 4 0 2016-01-04 23:25:36.870
+!MESSAGE Unable to resolve plug-in "platform:/plugin/org.eclipse.mylyn.tasks.ui/icons/eview16/task-list.gif".
+!STACK 0
+java.io.IOException: Unable to resolve plug-in "platform:/plugin/org.eclipse.mylyn.tasks.ui/icons/eview16/task-list.gif".
+	at org.eclipse.core.internal.runtime.PlatformURLPluginConnection.parse(PlatformURLPluginConnection.java:64)
+	at org.eclipse.core.internal.runtime.PlatformURLPluginConnection.resolve(PlatformURLPluginConnection.java:75)
+	at org.eclipse.core.internal.boot.PlatformURLHandler.openConnection(PlatformURLHandler.java:67)
+	at org.eclipse.osgi.internal.url.URLStreamHandlerProxy.openConnection(URLStreamHandlerProxy.java:114)
+	at java.net.URL.openConnection(Unknown Source)
+	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:33)
+	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:206)
+	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:141)
+	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:162)
+	at org.eclipse.jface.resource.ImageDescriptor.createImage(ImageDescriptor.java:230)
+	at org.eclipse.jface.resource.ImageDescriptor.createImage(ImageDescriptor.java:208)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.getImageFromURI(SWTPartRenderer.java:223)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.getImage(SWTPartRenderer.java:235)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.createTab(StackRenderer.java:825)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.processContents(LazyStackRenderer.java:139)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:674)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:185)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:674)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:185)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:674)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:185)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:674)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:185)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:674)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveRenderer.processContents(PerspectiveRenderer.java:49)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:674)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.showTab(PerspectiveStackRenderer.java:103)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:103)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.postProcess(PerspectiveStackRenderer.java:77)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:678)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:185)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:674)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.processContents(WBWRenderer.java:663)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:674)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1078)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY org.eclipse.jface 4 0 2016-01-04 23:25:37.016
+!MESSAGE Unable to resolve plug-in "platform:/plugin/org.testng.eclipse/icons/full/main16/testng_blur.gif".
+!STACK 0
+java.io.IOException: Unable to resolve plug-in "platform:/plugin/org.testng.eclipse/icons/full/main16/testng_blur.gif".
+	at org.eclipse.core.internal.runtime.PlatformURLPluginConnection.parse(PlatformURLPluginConnection.java:64)
+	at org.eclipse.core.internal.runtime.PlatformURLPluginConnection.resolve(PlatformURLPluginConnection.java:75)
+	at org.eclipse.core.internal.boot.PlatformURLHandler.openConnection(PlatformURLHandler.java:67)
+	at org.eclipse.osgi.internal.url.URLStreamHandlerProxy.openConnection(URLStreamHandlerProxy.java:114)
+	at java.net.URL.openConnection(Unknown Source)
+	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:33)
+	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:206)
+	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:141)
+	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:162)
+	at org.eclipse.jface.resource.ImageDescriptor.createImage(ImageDescriptor.java:230)
+	at org.eclipse.jface.resource.ImageDescriptor.createImage(ImageDescriptor.java:208)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.getImageFromURI(SWTPartRenderer.java:223)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.getImage(SWTPartRenderer.java:235)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.createTab(StackRenderer.java:825)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.processContents(LazyStackRenderer.java:139)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:674)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:185)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:674)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:185)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:674)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveRenderer.processContents(PerspectiveRenderer.java:49)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:674)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.showTab(PerspectiveStackRenderer.java:103)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:103)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.postProcess(PerspectiveStackRenderer.java:77)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:678)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:185)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:674)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.processContents(WBWRenderer.java:663)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:674)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1078)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-01-04 23:25:44.021
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Aaron Chun'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jdt.core 4 4 2016-01-04 23:55:41.268
+!MESSAGE Background Indexer Crash Recovery
+!STACK 0
+java.lang.OutOfMemoryError: Java heap space
+	at org.eclipse.jdt.internal.compiler.util.HashtableOfObject.<init>(HashtableOfObject.java:39)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:642)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategory(DiskIndex.java:463)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategories(DiskIndex.java:455)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:549)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:197)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndex(IndexManager.java:905)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:947)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:644)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:388)
+	at java.lang.Thread.run(Unknown Source)
+!SESSION 2016-01-04 23:56:48.540 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_60
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-01-05 00:04:15.683
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-01-05 00:04:15.707
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Aaron'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-01-05 00:04:18.201
+!MESSAGE Starting the AWS toolkit core plugin...
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-01-05 00:04:19.891
+!MESSAGE Monitoring content of C:\Users\Aaron\.aws\credentials
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-01-05 00:04:19.914
+!MESSAGE AWS toolkit core plugin initialized after 1713 milliseconds.
+
+!ENTRY org.testng.eclipse 4 4 2016-01-05 00:19:15.367
+!MESSAGE Error
+!STACK 0
+java.lang.IllegalArgumentException: invalid version "6.8.7beta-201309140723": non-numeric "7beta-201309140723"
+	at org.osgi.framework.Version.parseInt(Version.java:170)
+	at org.osgi.framework.Version.<init>(Version.java:134)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.getRuntimeTestNGVersion(TestNGLaunchConfigurationDelegate.java:399)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.getClasspath(TestNGLaunchConfigurationDelegate.java:340)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.createVMRunner(TestNGLaunchConfigurationDelegate.java:196)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.launchTypes(TestNGLaunchConfigurationDelegate.java:160)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.launch(TestNGLaunchConfigurationDelegate.java:90)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.NumberFormatException: For input string: "7beta-201309140723"
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at org.osgi.framework.Version.parseInt(Version.java:168)
+	... 11 more
+
+!ENTRY org.testng.eclipse 1 0 2016-01-05 00:19:15.432
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: D:\School\Senior\SE3800\team-wolfpack\calculator\bin D:\School\Senior\SE3800\team-wolfpack\testng.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 49204 -d D:\School\Senior\SE3800\team-wolfpack\calculator\test-output C:\Users\Aaron\AppData\Local\Temp\testng-eclipse-1986451098\testng-customsuite.xml
+java -ea -classpath D:\School\Senior\SE3800\team-wolfpack\calculator\bin:D:\School\Senior\SE3800\team-wolfpack\testng.jar org.testng.remote.RemoteTestNG -serport 49204 -d D:\School\Senior\SE3800\team-wolfpack\calculator\test-output C:\Users\Aaron\AppData\Local\Temp\testng-eclipse-1986451098\testng-customsuite.xml
+!SESSION 2016-01-05 00:29:14.918 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_60
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-01-05 00:29:33.098
+!MESSAGE Starting the AWS toolkit core plugin...
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-01-05 00:29:33.478
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-01-05 00:29:33.555
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Aaron'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-01-05 00:29:34.650
+!MESSAGE Monitoring content of C:\Users\Aaron\.aws\credentials
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-01-05 00:29:34.676
+!MESSAGE AWS toolkit core plugin initialized after 1581 milliseconds.
+
+!ENTRY org.testng.eclipse 4 4 2016-01-05 00:30:59.096
+!MESSAGE Error
+!STACK 0
+java.lang.IllegalArgumentException: invalid version "6.8.7beta-201309140723": non-numeric "7beta-201309140723"
+	at org.osgi.framework.Version.parseInt(Version.java:170)
+	at org.osgi.framework.Version.<init>(Version.java:134)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.getRuntimeTestNGVersion(TestNGLaunchConfigurationDelegate.java:399)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.getClasspath(TestNGLaunchConfigurationDelegate.java:340)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.createVMRunner(TestNGLaunchConfigurationDelegate.java:196)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.launchTypes(TestNGLaunchConfigurationDelegate.java:160)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.launch(TestNGLaunchConfigurationDelegate.java:90)
+	at com.mountainminds.eclemma.core.launching.CoverageLauncher.launch(CoverageLauncher.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.NumberFormatException: For input string: "7beta-201309140723"
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at org.osgi.framework.Version.parseInt(Version.java:168)
+	... 12 more
+
+!ENTRY org.testng.eclipse 1 0 2016-01-05 00:30:59.126
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: D:\School\Senior\SE3800\team-wolfpack\calculator\bin D:\School\Senior\SE3800\team-wolfpack\testng.jar
+  VMArgs:    -ea -javaagent:D:\Programs\eclipse\eclipse-java\configuration\org.eclipse.osgi\464\0\.cp\jacocoagent.jar=includes=*,excludes=,exclclassloader=sun.reflect.DelegatingClassLoader,output=tcpclient,port=49532
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 49533 -d D:\School\Senior\SE3800\team-wolfpack\calculator\test-output C:\Users\Aaron\AppData\Local\Temp\testng-eclipse--1321590941\testng-customsuite.xml
+java -ea -javaagent:D:\Programs\eclipse\eclipse-java\configuration\org.eclipse.osgi\464\0\.cp\jacocoagent.jar=includes=*,excludes=,exclclassloader=sun.reflect.DelegatingClassLoader,output=tcpclient,port=49532 -classpath D:\School\Senior\SE3800\team-wolfpack\calculator\bin:D:\School\Senior\SE3800\team-wolfpack\testng.jar org.testng.remote.RemoteTestNG -serport 49533 -d D:\School\Senior\SE3800\team-wolfpack\calculator\test-output C:\Users\Aaron\AppData\Local\Temp\testng-eclipse--1321590941\testng-customsuite.xml
+
+!ENTRY com.mountainminds.eclemma.core 4 5013 2016-01-05 00:33:46.896
+!MESSAGE Error while dumping coverage data (code 5013).
+!STACK 0
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.io.DataInputStream.readByte(Unknown Source)
+	at org.jacoco.core.data.ExecutionDataReader.read(ExecutionDataReader.java:82)
+	at com.mountainminds.eclemma.internal.core.MemoryExecutionDataSource.readFrom(MemoryExecutionDataSource.java:68)
+	at com.mountainminds.eclemma.internal.core.launching.AgentServer.run(AgentServer.java:114)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.testng.eclipse 4 4 2016-01-05 00:33:56.263
+!MESSAGE Error
+!STACK 0
+java.lang.IllegalArgumentException: invalid version "6.8.7beta-201309140723": non-numeric "7beta-201309140723"
+	at org.osgi.framework.Version.parseInt(Version.java:170)
+	at org.osgi.framework.Version.<init>(Version.java:134)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.getRuntimeTestNGVersion(TestNGLaunchConfigurationDelegate.java:399)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.getClasspath(TestNGLaunchConfigurationDelegate.java:340)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.createVMRunner(TestNGLaunchConfigurationDelegate.java:196)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.launchTypes(TestNGLaunchConfigurationDelegate.java:160)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.launch(TestNGLaunchConfigurationDelegate.java:90)
+	at com.mountainminds.eclemma.core.launching.CoverageLauncher.launch(CoverageLauncher.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.NumberFormatException: For input string: "7beta-201309140723"
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at org.osgi.framework.Version.parseInt(Version.java:168)
+	... 12 more
+
+!ENTRY org.testng.eclipse 1 0 2016-01-05 00:33:56.270
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: D:\School\Senior\SE3800\team-wolfpack\calculator\bin D:\School\Senior\SE3800\team-wolfpack\testng.jar
+  VMArgs:    -ea -javaagent:D:\Programs\eclipse\eclipse-java\configuration\org.eclipse.osgi\464\0\.cp\jacocoagent.jar=includes=*,excludes=,exclclassloader=sun.reflect.DelegatingClassLoader,output=tcpclient,port=49609
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 49610 -d D:\School\Senior\SE3800\team-wolfpack\calculator\test-output C:\Users\Aaron\AppData\Local\Temp\testng-eclipse-313420029\testng-customsuite.xml
+java -ea -javaagent:D:\Programs\eclipse\eclipse-java\configuration\org.eclipse.osgi\464\0\.cp\jacocoagent.jar=includes=*,excludes=,exclclassloader=sun.reflect.DelegatingClassLoader,output=tcpclient,port=49609 -classpath D:\School\Senior\SE3800\team-wolfpack\calculator\bin:D:\School\Senior\SE3800\team-wolfpack\testng.jar org.testng.remote.RemoteTestNG -serport 49610 -d D:\School\Senior\SE3800\team-wolfpack\calculator\test-output C:\Users\Aaron\AppData\Local\Temp\testng-eclipse-313420029\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 4 4 2016-01-05 00:39:11.718
+!MESSAGE Error
+!STACK 0
+java.lang.IllegalArgumentException: invalid version "6.8.7beta-201309140723": non-numeric "7beta-201309140723"
+	at org.osgi.framework.Version.parseInt(Version.java:170)
+	at org.osgi.framework.Version.<init>(Version.java:134)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.getRuntimeTestNGVersion(TestNGLaunchConfigurationDelegate.java:399)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.getClasspath(TestNGLaunchConfigurationDelegate.java:340)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.createVMRunner(TestNGLaunchConfigurationDelegate.java:196)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.launchTypes(TestNGLaunchConfigurationDelegate.java:160)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.launch(TestNGLaunchConfigurationDelegate.java:90)
+	at com.mountainminds.eclemma.core.launching.CoverageLauncher.launch(CoverageLauncher.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.NumberFormatException: For input string: "7beta-201309140723"
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at org.osgi.framework.Version.parseInt(Version.java:168)
+	... 12 more
+
+!ENTRY org.testng.eclipse 1 0 2016-01-05 00:39:11.733
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: D:\School\Senior\SE3800\team-wolfpack\calculator\bin D:\School\Senior\SE3800\team-wolfpack\testng.jar
+  VMArgs:    -ea -javaagent:D:\Programs\eclipse\eclipse-java\configuration\org.eclipse.osgi\464\0\.cp\jacocoagent.jar=includes=*,excludes=,exclclassloader=sun.reflect.DelegatingClassLoader,output=tcpclient,port=49727
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 49728 -d D:\School\Senior\SE3800\team-wolfpack\calculator\test-output C:\Users\Aaron\AppData\Local\Temp\testng-eclipse--188229072\testng-customsuite.xml
+java -ea -javaagent:D:\Programs\eclipse\eclipse-java\configuration\org.eclipse.osgi\464\0\.cp\jacocoagent.jar=includes=*,excludes=,exclclassloader=sun.reflect.DelegatingClassLoader,output=tcpclient,port=49727 -classpath D:\School\Senior\SE3800\team-wolfpack\calculator\bin:D:\School\Senior\SE3800\team-wolfpack\testng.jar org.testng.remote.RemoteTestNG -serport 49728 -d D:\School\Senior\SE3800\team-wolfpack\calculator\test-output C:\Users\Aaron\AppData\Local\Temp\testng-eclipse--188229072\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 4 4 2016-01-05 00:41:19.866
+!MESSAGE Error
+!STACK 0
+java.lang.IllegalArgumentException: invalid version "6.8.7beta-201309140723": non-numeric "7beta-201309140723"
+	at org.osgi.framework.Version.parseInt(Version.java:170)
+	at org.osgi.framework.Version.<init>(Version.java:134)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.getRuntimeTestNGVersion(TestNGLaunchConfigurationDelegate.java:399)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.getClasspath(TestNGLaunchConfigurationDelegate.java:340)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.createVMRunner(TestNGLaunchConfigurationDelegate.java:196)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.launchTypes(TestNGLaunchConfigurationDelegate.java:160)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.launch(TestNGLaunchConfigurationDelegate.java:90)
+	at com.mountainminds.eclemma.core.launching.CoverageLauncher.launch(CoverageLauncher.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.NumberFormatException: For input string: "7beta-201309140723"
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at org.osgi.framework.Version.parseInt(Version.java:168)
+	... 12 more
+
+!ENTRY org.testng.eclipse 1 0 2016-01-05 00:41:19.873
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: D:\School\Senior\SE3800\team-wolfpack\calculator\bin D:\School\Senior\SE3800\team-wolfpack\testng.jar
+  VMArgs:    -ea -javaagent:D:\Programs\eclipse\eclipse-java\configuration\org.eclipse.osgi\464\0\.cp\jacocoagent.jar=includes=*,excludes=,exclclassloader=sun.reflect.DelegatingClassLoader,output=tcpclient,port=49759
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 49760 -d D:\School\Senior\SE3800\team-wolfpack\calculator\test-output C:\Users\Aaron\AppData\Local\Temp\testng-eclipse-516382437\testng-customsuite.xml
+java -ea -javaagent:D:\Programs\eclipse\eclipse-java\configuration\org.eclipse.osgi\464\0\.cp\jacocoagent.jar=includes=*,excludes=,exclclassloader=sun.reflect.DelegatingClassLoader,output=tcpclient,port=49759 -classpath D:\School\Senior\SE3800\team-wolfpack\calculator\bin:D:\School\Senior\SE3800\team-wolfpack\testng.jar org.testng.remote.RemoteTestNG -serport 49760 -d D:\School\Senior\SE3800\team-wolfpack\calculator\test-output C:\Users\Aaron\AppData\Local\Temp\testng-eclipse-516382437\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 4 4 2016-01-05 00:44:20.843
+!MESSAGE Error
+!STACK 0
+java.lang.IllegalArgumentException: invalid version "6.8.7beta-201309140723": non-numeric "7beta-201309140723"
+	at org.osgi.framework.Version.parseInt(Version.java:170)
+	at org.osgi.framework.Version.<init>(Version.java:134)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.getRuntimeTestNGVersion(TestNGLaunchConfigurationDelegate.java:399)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.getClasspath(TestNGLaunchConfigurationDelegate.java:340)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.createVMRunner(TestNGLaunchConfigurationDelegate.java:196)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.launchTypes(TestNGLaunchConfigurationDelegate.java:160)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.launch(TestNGLaunchConfigurationDelegate.java:90)
+	at com.mountainminds.eclemma.core.launching.CoverageLauncher.launch(CoverageLauncher.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.NumberFormatException: For input string: "7beta-201309140723"
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at org.osgi.framework.Version.parseInt(Version.java:168)
+	... 12 more
+
+!ENTRY org.testng.eclipse 1 0 2016-01-05 00:44:20.849
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: D:\School\Senior\SE3800\team-wolfpack\calculator\bin D:\School\Senior\SE3800\team-wolfpack\testng.jar
+  VMArgs:    -ea -javaagent:D:\Programs\eclipse\eclipse-java\configuration\org.eclipse.osgi\464\0\.cp\jacocoagent.jar=includes=*,excludes=,exclclassloader=sun.reflect.DelegatingClassLoader,output=tcpclient,port=49842
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 49843 -d D:\School\Senior\SE3800\team-wolfpack\calculator\test-output C:\Users\Aaron\AppData\Local\Temp\testng-eclipse-361806969\testng-customsuite.xml
+java -ea -javaagent:D:\Programs\eclipse\eclipse-java\configuration\org.eclipse.osgi\464\0\.cp\jacocoagent.jar=includes=*,excludes=,exclclassloader=sun.reflect.DelegatingClassLoader,output=tcpclient,port=49842 -classpath D:\School\Senior\SE3800\team-wolfpack\calculator\bin:D:\School\Senior\SE3800\team-wolfpack\testng.jar org.testng.remote.RemoteTestNG -serport 49843 -d D:\School\Senior\SE3800\team-wolfpack\calculator\test-output C:\Users\Aaron\AppData\Local\Temp\testng-eclipse-361806969\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 4 4 2016-01-05 00:45:19.678
+!MESSAGE Error
+!STACK 0
+java.lang.IllegalArgumentException: invalid version "6.8.7beta-201309140723": non-numeric "7beta-201309140723"
+	at org.osgi.framework.Version.parseInt(Version.java:170)
+	at org.osgi.framework.Version.<init>(Version.java:134)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.getRuntimeTestNGVersion(TestNGLaunchConfigurationDelegate.java:399)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.getClasspath(TestNGLaunchConfigurationDelegate.java:340)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.createVMRunner(TestNGLaunchConfigurationDelegate.java:196)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.launchTypes(TestNGLaunchConfigurationDelegate.java:160)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.launch(TestNGLaunchConfigurationDelegate.java:90)
+	at com.mountainminds.eclemma.core.launching.CoverageLauncher.launch(CoverageLauncher.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.NumberFormatException: For input string: "7beta-201309140723"
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at org.osgi.framework.Version.parseInt(Version.java:168)
+	... 12 more
+
+!ENTRY org.testng.eclipse 1 0 2016-01-05 00:45:19.686
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: D:\School\Senior\SE3800\team-wolfpack\calculator\bin D:\School\Senior\SE3800\team-wolfpack\testng.jar
+  VMArgs:    -ea -javaagent:D:\Programs\eclipse\eclipse-java\configuration\org.eclipse.osgi\464\0\.cp\jacocoagent.jar=includes=*,excludes=,exclclassloader=sun.reflect.DelegatingClassLoader,output=tcpclient,port=49872
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 49873 -d D:\School\Senior\SE3800\team-wolfpack\calculator\test-output C:\Users\Aaron\AppData\Local\Temp\testng-eclipse-2094205384\testng-customsuite.xml
+java -ea -javaagent:D:\Programs\eclipse\eclipse-java\configuration\org.eclipse.osgi\464\0\.cp\jacocoagent.jar=includes=*,excludes=,exclclassloader=sun.reflect.DelegatingClassLoader,output=tcpclient,port=49872 -classpath D:\School\Senior\SE3800\team-wolfpack\calculator\bin:D:\School\Senior\SE3800\team-wolfpack\testng.jar org.testng.remote.RemoteTestNG -serport 49873 -d D:\School\Senior\SE3800\team-wolfpack\calculator\test-output C:\Users\Aaron\AppData\Local\Temp\testng-eclipse-2094205384\testng-customsuite.xml
