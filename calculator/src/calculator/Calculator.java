@@ -15,15 +15,14 @@ public class Calculator {
 	//Scanner object to get user input.
 	private static Scanner in;
 	
+	//contains a running history of all calculations
 	private static ArrayList<Calculation> history 
 		= new ArrayList<>();
 	
 	private static Calculation calc;
 	
 	private static boolean wumbo = false;
-	
-	private static boolean programRunning = true;
-	
+		
 	private static boolean zeroDivision = false;
 	
 	/**
@@ -33,7 +32,11 @@ public class Calculator {
 	public static void main(String [] args){
 		in = new Scanner(System.in);
 		help();
-		getUserInput();
+		try {
+			getUserInput(null);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 	/**
@@ -49,67 +52,74 @@ public class Calculator {
 	/**
 	 * Gets user input.
 	 * @author kuczynskij
+	 * @throws Exception 
 	 */
-	private static void getUserInput(){
-		while(programRunning){
-			System.out.print("Enter command: ");
-			String cmd = in.next();
-			switch(cmd){
-				case "add":
-					if(!wumbo)
-						add(null);
-					else
-						sub(null);
-					break;
-				case "sub":
-					if(!wumbo)
-						sub(null);
-					else
-						add(null);
-					break;
-				case "mult":
-					if(!wumbo)
-						mult(null);
-					else
-						div(null);
-					break;
-				case "div":
-					if(!wumbo)
-						div(null);
-					else
-						mult(null);
-					break;
-				case "hist":
-					hist();
-					break;
-				case "clear":
-					clear();
-					break;
-				case "wumbo":
-					wumbo();
-					break;
-				case "help":
-					help();
-					break;
-				case "quit":
-					System.out.println("Thanks for using me I guess...");
-					programRunning = false;
-					break;
-				default:
-					 //Clear the buffer of any extra things input 
-					 //after the incorrect command.
-					in.nextLine();
-					System.out.println("Woops, looks like you inputed an"
-							+ " invalid command.");
-					break;
-			}
+	public static String getUserInput(String cmd) throws Exception{
+		System.out.print("Enter command: ");
+		if(cmd == null){
+			in = new Scanner(System.in);
+			cmd = in.next();
+		}else{
+			in = new Scanner(cmd);
+			cmd = in.next();
 		}
+		switch(cmd){
+			case "add":
+				if(!wumbo)
+					add(null);
+				else
+					sub(null);
+				break;
+			case "sub":
+				if(!wumbo)
+					sub(null);
+				else
+					add(null);
+				break;
+			case "mult":
+				if(!wumbo)
+					mult(null);
+				else
+					div(null);
+				break;
+			case "div":
+				if(!wumbo)
+					div(null);
+				else
+					mult(null);
+				break;
+			case "hist":
+				hist();
+				break;
+			case "clear":
+				clear();
+				break;
+			case "wumbo":
+				wumbo();
+				break;
+			case "help":
+				help();
+				break;
+			case "quit":
+				System.out.println("Thanks for using me I guess...");
+				return null;
+			default:
+				 //Clear the buffer of any extra things input 
+				 //after the incorrect command.
+				in.nextLine();
+				System.out.println("Woops, looks like you inputed an"
+						+ " invalid command.");
+				break;
+			}
+		getUserInput(null);
+		return null;
 	}
 	
 	/**
 	 * Validates user input to ensure that a list of integers has
 	 * been passed in. Then returns them as a List of Integers.
 	 * @author kuczynskij & chuna
+	 * @param c -> Calculation used for reuse
 	 * @return l -> List of user inputed integers
 	 */
 	private static List<Integer> getIntegers(Calculation c){
@@ -132,7 +142,6 @@ public class Calculator {
         }catch(NumberFormatException nfe){
             System.out.println("There was an error in the numbers " 
             	+ "provided. Command did not finish executing.");
-//            getUserInput();
         }
 		return l;
 	}
@@ -243,9 +252,11 @@ public class Calculator {
 	 * Divides the list of integers and uses integer division.
 	 * Has a check for zero division
 	 * @author chuna
-	 * @throws Exception 
+	 * @throws Exception
+	 * @param list -> list of Integers
+	 * @return quotient 
 	 */
-	public static int div(List<Integer> list){
+	public static int div(List<Integer> list) throws Exception{
 		zeroDivision = false;
 		calc = new Calculation("div");
 		int quot = 0;
@@ -264,6 +275,7 @@ public class Calculator {
 			}
 			if(zeroDivision){
 				System.out.println("Error: Cannot divide by zero.");
+				throw new Exception("divide by zero");
 			}else{
 				System.out.println("The quotient is: " + quot);
 				calc.setAns(quot);
@@ -277,6 +289,7 @@ public class Calculator {
 	 * User Story #5
 	 * Prints out the previous computation history the user as input.
 	 * @author kuczynskij
+	 * @return hist
 	 */
 	public static String hist(){
 		int h = history.size();
@@ -284,8 +297,6 @@ public class Calculator {
 		if(h > 0){
 			System.out.println("Printing out calculation history.");
 			for(int i = 0; i < h ; ++i){
-//				System.out.println(
-//						(i + 1) + " | " + history.get(h-(1 + i)));
 				hist += (i + 1) + " | " + history.get(h-(1 + i)) +
 						"\n";
 			}
@@ -305,14 +316,10 @@ public class Calculator {
 	 * @author chuna
 	 */
 	public static void clear(){
-		try{
+		if(history != null)
 			history = new ArrayList<Calculation>();
-			System.out.println("The Calculation history has been"
-					+ " cleared.");
-		}catch(Exception e){
-			System.out.println("Error: History may not have been "
-					+ "cleared.");
-		}
+		System.out.println("The Calculation history has been"
+				+ " cleared.");
 	}
 	
 	/**
@@ -322,6 +329,10 @@ public class Calculator {
 	 * Ex: 5 + 3 = 8; -> 2 + result = 10
 	 * @author kuczynskij
 	 * @param num - number of history result
+	 * @param c -> Calculation to get cmd
+	 * @return	previous result
+	 * 		0 -> if add/sub and no hist
+	 * 		1 -> if mult/div and no hist
 	 */
 	public static int reuse(int num, Calculation c){
 		if (history.size() > 0 && num > 0 && history.size() >= num){

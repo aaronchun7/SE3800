@@ -8,8 +8,37 @@ import calculator.Calculator;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Tests the Calculator class.
+ * @author Jim Kuczynski (kuczynskij)
+ * @author Aaron Chun (chuna)
+ */
 public class testCalculator {
 
+	/**
+	 * Tests add() method.
+	 * @author chuna
+	 * @throws Exception 
+	 */
+	@Test
+	public void testGetUserInput() throws Exception{
+		Calculator.clear();
+		Calculator.getUserInput("add 1 2 3\n"
+				+ "sub 1 2 3\n"
+				+ "mult 1 2 3\n"
+				+ "div 10 5 2\n"
+				+ "wumbo\n"
+				+ "add 1 2 3\n"
+				+ "sub 1 2 3\n"
+				+ "mult 1 !2 3\n"
+				+ "div 10 5 2#\n"
+				+ "hist\n"
+				+ "clear\n"
+				+ "help\n"
+				+ "lsdjfl\n"
+				+ "quit");
+	}
+	
 	/**
 	 * Tests add() method.
 	 * @author chuna
@@ -19,7 +48,6 @@ public class testCalculator {
 	public void testAdd(){
 		List <Integer> l = new ArrayList<Integer>(){{add(1);add(2);add(3);}};
 		assert(Calculator.add(l) == 6);
-//		assert(Calculator.add(l) == 0);
 		l = new ArrayList<Integer>(){{add(Integer.MAX_VALUE);add(1);}};
 		assert(Calculator.add(l) == Integer.MAX_VALUE);
 		l = new ArrayList<Integer>(){{add(Integer.MIN_VALUE);add(-1);}};
@@ -65,25 +93,38 @@ public class testCalculator {
 	/**
 	 * Tests div() method.
 	 * @author kuczynskij
+	 * @throws Exception 
 	 */
 	@SuppressWarnings("serial")
 	@Test
 	public void testDiv(){
-		List <Integer> l = new ArrayList<Integer>(){{add(4);add(2);add(3);}};
-		assert(Calculator.div(l) == 0);
-		l = new ArrayList<Integer>(){{add(Integer.MIN_VALUE);add(1);}};
-		assert(Calculator.div(l) == Integer.MIN_VALUE);
-		l = new ArrayList<Integer>(){{add(Integer.MAX_VALUE);add(1);}};
-		assert(Calculator.div(l) == Integer.MAX_VALUE);
- 		l = new ArrayList<Integer>(){{add(4);add(-5);add(6);}};
-		assert(Calculator.div(l) == 0);
-		int histSize = Calculator.getHistory().size();
-		l = new ArrayList<Integer>(){{add(4);add(0);add(6);}};
-		Calculator.div(l);
-		assert(Calculator.getZeroDivision());
-		assert(histSize == Calculator.getHistory().size());
+		try{
+			List <Integer> l = new ArrayList<Integer>(){{add(4);add(2);add(3);}};
+			assert(Calculator.div(l) == 0);
+			l = new ArrayList<Integer>(){{add(Integer.MIN_VALUE);add(1);}};
+			assert(Calculator.div(l) == Integer.MIN_VALUE);
+			l = new ArrayList<Integer>(){{add(Integer.MAX_VALUE);add(1);}};
+			assert(Calculator.div(l) == Integer.MAX_VALUE);
+	 		l = new ArrayList<Integer>(){{add(4);add(-5);add(6);}};
+			assert(Calculator.div(l) == 0);
+		}catch(Exception e){
+			assert(false);
+		}
 	}
 
+	/**
+	 * Tests the div() for Exception (divide by zero).
+	 * @author chuna
+	 * @throws Exception
+	 */
+	@SuppressWarnings("serial")
+	@Test(expectedExceptions = Exception.class)
+	public void testZeroDivide() throws Exception{
+		List <Integer> l = new ArrayList<Integer>(){{add(4);add(0);add(6);}};
+		Calculator.div(l);
+		assert(false);
+	}
+	
 	/**
 	 * Tests hist() method.
 	 * @author chuna
@@ -99,7 +140,11 @@ public class testCalculator {
 		Calculator.add(l);
 		Calculator.sub(l);
 		Calculator.mult(l);
-		Calculator.div(l);
+		try {
+			Calculator.div(l);
+		} catch (Exception e) {
+			assert(false);
+		}
 		expectedAns = "1 | div | 10 5 2 | 1\n"
 				+ "2 | mult | 10 5 2 | 100\n"
 				+ "3 | sub | 10 5 2 | 3\n"
@@ -136,7 +181,11 @@ public class testCalculator {
 		Calculator.add(l);
 		Calculator.sub(l);
 		Calculator.mult(l);
-		Calculator.div(l);
+		try {
+			Calculator.div(l);
+		} catch (Exception e) {
+			assert(false);
+		}
 		assert(Calculator.reuse(4, null) == 17); // add
 		assert(Calculator.reuse(3, null) == 3); // sub
 		assert(Calculator.reuse(2, null) == 100); // mult
@@ -157,12 +206,18 @@ public class testCalculator {
 	 * Tests wumbo() method.
 	 * @author kuczynskij
 	 */
-	@SuppressWarnings("serial")
 	@Test
 	public void testWumbo(){
-		Calculator.wumbo();
-		assert(Calculator.getWumbo() == true);
-		Calculator.wumbo();
-		assert(Calculator.getWumbo() == false);
+		if(Calculator.getWumbo()){
+			Calculator.wumbo();
+			assert(Calculator.getWumbo() == false);
+			Calculator.wumbo();
+			assert(Calculator.getWumbo() == true);
+		}else{
+			Calculator.wumbo();
+			assert(Calculator.getWumbo() == true);
+			Calculator.wumbo();
+			assert(Calculator.getWumbo() == false);
+		}
 	}
 }

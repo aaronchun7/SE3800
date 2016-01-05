@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>7/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>10/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jan 04 19:12:23 CST 2016</td>
+<td>Started on:</td><td>Tue Jan 05 17:19:55 CST 2016</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (71 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (322 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
@@ -76,8 +76,54 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='test.testCalculator.testAdd()'><b>testAdd</b><br>Test class: test.testCalculator</td>
-<td><div><pre>java.lang.AssertionError
-	at test.testCalculator.testAdd(testCalculator.java:20)
+<td></td>
+<td>0</td>
+<td>test.testCalculator@3835c46</td></tr>
+<tr>
+<td title='test.testCalculator.testClear()'><b>testClear</b><br>Test class: test.testCalculator</td>
+<td></td>
+<td>0</td>
+<td>test.testCalculator@3835c46</td></tr>
+<tr>
+<td title='test.testCalculator.testDiv()'><b>testDiv</b><br>Test class: test.testCalculator</td>
+<td></td>
+<td>0</td>
+<td>test.testCalculator@3835c46</td></tr>
+<tr>
+<td title='test.testCalculator.testGetUserInput()'><b>testGetUserInput</b><br>Test class: test.testCalculator</td>
+<td></td>
+<td>0</td>
+<td>test.testCalculator@3835c46</td></tr>
+<tr>
+<td title='test.testCalculator.testHist()'><b>testHist</b><br>Test class: test.testCalculator</td>
+<td></td>
+<td>0</td>
+<td>test.testCalculator@3835c46</td></tr>
+<tr>
+<td title='test.testCalculator.testMult()'><b>testMult</b><br>Test class: test.testCalculator</td>
+<td></td>
+<td>0</td>
+<td>test.testCalculator@3835c46</td></tr>
+<tr>
+<td title='test.testCalculator.testReuse()'><b>testReuse</b><br>Test class: test.testCalculator</td>
+<td></td>
+<td>0</td>
+<td>test.testCalculator@3835c46</td></tr>
+<tr>
+<td title='test.testCalculator.testSub()'><b>testSub</b><br>Test class: test.testCalculator</td>
+<td></td>
+<td>0</td>
+<td>test.testCalculator@3835c46</td></tr>
+<tr>
+<td title='test.testCalculator.testWumbo()'><b>testWumbo</b><br>Test class: test.testCalculator</td>
+<td></td>
+<td>0</td>
+<td>test.testCalculator@3835c46</td></tr>
+<tr>
+<td title='test.testCalculator.testZeroDivide()'><b>testZeroDivide</b><br>Test class: test.testCalculator</td>
+<td><div><pre>java.lang.Exception: divide by zero
+	at calculator.Calculator.div(Calculator.java:285)
+	at test.testCalculator.testZeroDivide(testCalculator.java:115)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -102,9 +148,10 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1763344271", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1763344271'><pre>java.lang.AssertionError
-	at test.testCalculator.testAdd(testCalculator.java:20)
+</pre></div><a href='#' onClick='toggleBox("stack-trace931675031", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace931675031'><pre>java.lang.Exception: divide by zero
+	at calculator.Calculator.div(Calculator.java:285)
+	at test.testCalculator.testZeroDivide(testCalculator.java:115)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -131,50 +178,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 </pre></div></td>
 <td>0</td>
-<td>test.testCalculator@6e2c9341</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='test.testCalculator.testClear()'><b>testClear</b><br>Test class: test.testCalculator</td>
-<td></td>
-<td>0</td>
-<td>test.testCalculator@6e2c9341</td></tr>
-<tr>
-<td title='test.testCalculator.testDiv()'><b>testDiv</b><br>Test class: test.testCalculator</td>
-<td></td>
-<td>0</td>
-<td>test.testCalculator@6e2c9341</td></tr>
-<tr>
-<td title='test.testCalculator.testHist()'><b>testHist</b><br>Test class: test.testCalculator</td>
-<td></td>
-<td>0</td>
-<td>test.testCalculator@6e2c9341</td></tr>
-<tr>
-<td title='test.testCalculator.testMult()'><b>testMult</b><br>Test class: test.testCalculator</td>
-<td></td>
-<td>0</td>
-<td>test.testCalculator@6e2c9341</td></tr>
-<tr>
-<td title='test.testCalculator.testReuse()'><b>testReuse</b><br>Test class: test.testCalculator</td>
-<td></td>
-<td>0</td>
-<td>test.testCalculator@6e2c9341</td></tr>
-<tr>
-<td title='test.testCalculator.testSub()'><b>testSub</b><br>Test class: test.testCalculator</td>
-<td></td>
-<td>0</td>
-<td>test.testCalculator@6e2c9341</td></tr>
-<tr>
-<td title='test.testCalculator.testWumbo()'><b>testWumbo</b><br>Test class: test.testCalculator</td>
-<td></td>
-<td>0</td>
-<td>test.testCalculator@6e2c9341</td></tr>
+<td>test.testCalculator@3835c46</td></tr>
 </table><p>
 </body>
 </html>

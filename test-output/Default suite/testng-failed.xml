@@ -5,7 +5,7 @@
     <classes>
       <class name="test.testCalculator">
         <methods>
-          <include name="testAdd"/>
+          <include name="testGetUserInput"/>
         </methods>
       </class> <!-- test.testCalculator -->
     </classes>

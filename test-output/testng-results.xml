@@ -1,17 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="8" passed="7">
+<testng-results skipped="0" failed="0" total="10" passed="10">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="71" started-at="2016-01-05T01:12:23Z" finished-at="2016-01-05T01:12:23Z">
+  <suite name="Default suite" duration-ms="322" started-at="2016-01-05T23:19:55Z" finished-at="2016-01-05T23:19:56Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="71" started-at="2016-01-05T01:12:23Z" finished-at="2016-01-05T01:12:23Z">
+    <test name="Default test" duration-ms="322" started-at="2016-01-05T23:19:55Z" finished-at="2016-01-05T23:19:56Z">
       <class name="test.testCalculator">
-        <test-method status="FAIL" signature="testAdd()[pri:0, instance:test.testCalculator@6e2c9341]" name="testAdd" duration-ms="20" started-at="2016-01-04T19:12:23Z" finished-at="2016-01-04T19:12:23Z">
-          <exception class="java.lang.AssertionError">
+        <test-method status="PASS" signature="testAdd()[pri:0, instance:test.testCalculator@3835c46]" name="testAdd" duration-ms="58" started-at="2016-01-05T17:19:55Z" finished-at="2016-01-05T17:19:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAdd -->
+        <test-method status="PASS" signature="testClear()[pri:0, instance:test.testCalculator@3835c46]" name="testClear" duration-ms="3" started-at="2016-01-05T17:19:55Z" finished-at="2016-01-05T17:19:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testClear -->
+        <test-method status="PASS" signature="testDiv()[pri:0, instance:test.testCalculator@3835c46]" name="testDiv" duration-ms="14" started-at="2016-01-05T17:19:55Z" finished-at="2016-01-05T17:19:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDiv -->
+        <test-method status="PASS" signature="testGetUserInput()[pri:0, instance:test.testCalculator@3835c46]" name="testGetUserInput" duration-ms="67" started-at="2016-01-05T17:19:55Z" finished-at="2016-01-05T17:19:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetUserInput -->
+        <test-method status="PASS" signature="testHist()[pri:0, instance:test.testCalculator@3835c46]" name="testHist" duration-ms="6" started-at="2016-01-05T17:19:55Z" finished-at="2016-01-05T17:19:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testHist -->
+        <test-method status="PASS" signature="testMult()[pri:0, instance:test.testCalculator@3835c46]" name="testMult" duration-ms="10" started-at="2016-01-05T17:19:56Z" finished-at="2016-01-05T17:19:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMult -->
+        <test-method status="PASS" signature="testReuse()[pri:0, instance:test.testCalculator@3835c46]" name="testReuse" duration-ms="6" started-at="2016-01-05T17:19:56Z" finished-at="2016-01-05T17:19:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReuse -->
+        <test-method status="PASS" signature="testSub()[pri:0, instance:test.testCalculator@3835c46]" name="testSub" duration-ms="13" started-at="2016-01-05T17:19:56Z" finished-at="2016-01-05T17:19:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSub -->
+        <test-method status="PASS" signature="testWumbo()[pri:0, instance:test.testCalculator@3835c46]" name="testWumbo" duration-ms="4" started-at="2016-01-05T17:19:56Z" finished-at="2016-01-05T17:19:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWumbo -->
+        <test-method status="PASS" signature="testZeroDivide()[pri:0, instance:test.testCalculator@3835c46]" name="testZeroDivide" duration-ms="3" started-at="2016-01-05T17:19:56Z" finished-at="2016-01-05T17:19:56Z">
+          <exception class="java.lang.Exception">
+            <message>
+              <![CDATA[divide by zero]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError
-	at test.testCalculator.testAdd(testCalculator.java:20)
+              <![CDATA[java.lang.Exception: divide by zero
+	at calculator.Calculator.div(Calculator.java:285)
+	at test.testCalculator.testZeroDivide(testCalculator.java:115)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -38,38 +78,10 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- java.lang.Exception -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testAdd -->
-        <test-method status="PASS" signature="testClear()[pri:0, instance:test.testCalculator@6e2c9341]" name="testClear" duration-ms="2" started-at="2016-01-04T19:12:23Z" finished-at="2016-01-04T19:12:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testClear -->
-        <test-method status="PASS" signature="testDiv()[pri:0, instance:test.testCalculator@6e2c9341]" name="testDiv" duration-ms="7" started-at="2016-01-04T19:12:23Z" finished-at="2016-01-04T19:12:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testDiv -->
-        <test-method status="PASS" signature="testHist()[pri:0, instance:test.testCalculator@6e2c9341]" name="testHist" duration-ms="1" started-at="2016-01-04T19:12:23Z" finished-at="2016-01-04T19:12:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testHist -->
-        <test-method status="PASS" signature="testMult()[pri:0, instance:test.testCalculator@6e2c9341]" name="testMult" duration-ms="4" started-at="2016-01-04T19:12:23Z" finished-at="2016-01-04T19:12:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMult -->
-        <test-method status="PASS" signature="testReuse()[pri:0, instance:test.testCalculator@6e2c9341]" name="testReuse" duration-ms="2" started-at="2016-01-04T19:12:23Z" finished-at="2016-01-04T19:12:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testReuse -->
-        <test-method status="PASS" signature="testSub()[pri:0, instance:test.testCalculator@6e2c9341]" name="testSub" duration-ms="4" started-at="2016-01-04T19:12:23Z" finished-at="2016-01-04T19:12:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSub -->
-        <test-method status="PASS" signature="testWumbo()[pri:0, instance:test.testCalculator@6e2c9341]" name="testWumbo" duration-ms="1" started-at="2016-01-04T19:12:23Z" finished-at="2016-01-04T19:12:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testWumbo -->
+        </test-method> <!-- testZeroDivide -->
       </class> <!-- test.testCalculator -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
