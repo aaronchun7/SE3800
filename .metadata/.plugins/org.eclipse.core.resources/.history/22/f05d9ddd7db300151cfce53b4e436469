@@ -85,32 +85,18 @@ public class testCalculator {
 	 * Tests hist() method.
 	 * @author chuna
 	 */
-	@SuppressWarnings("serial")
 	@Test
 	public void testHist(){
-		Calculator.clear();
-		String expectedAns = "There is no history to display.";
-		assert(Calculator.hist().equals(expectedAns));
-		List <Integer> l = new ArrayList<Integer>(){
-			{add(10);add(5);add(2);}};
-		Calculator.add(l);
-		Calculator.sub(l);
-		Calculator.mult(l);
-		Calculator.div(l);
-		expectedAns = "1 | div | 10 5 2 | 1\n"
-				+ "2 | mult | 10 5 2 | 100\n"
-				+ "3 | sub | 10 5 2 | 3\n"
-				+ "4 | add | 10 5 2 | 17";
-		assert(Calculator.hist().equals(expectedAns));
+		//TODO
 	}
 
 	/**
 	 * Tests clear() method.
 	 * @author kuczynskij
 	 */
-	@SuppressWarnings("serial")
 	@Test
 	public void testClear(){
+		@SuppressWarnings("serial")
 		List <Integer> l = new ArrayList<Integer>(){{add(4);add(2);add(3);}};
 		Calculator.add(l);
 		Calculator.sub(l);

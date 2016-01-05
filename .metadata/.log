@@ -1529,3 +1529,253 @@ Caused by: java.lang.NumberFormatException: For input string: "7beta-20130914072
   Class:     org.testng.remote.RemoteTestNG
   Args:      -serport 49873 -d D:\School\Senior\SE3800\team-wolfpack\calculator\test-output C:\Users\Aaron\AppData\Local\Temp\testng-eclipse-2094205384\testng-customsuite.xml
 java -ea -javaagent:D:\Programs\eclipse\eclipse-java\configuration\org.eclipse.osgi\464\0\.cp\jacocoagent.jar=includes=*,excludes=,exclclassloader=sun.reflect.DelegatingClassLoader,output=tcpclient,port=49872 -classpath D:\School\Senior\SE3800\team-wolfpack\calculator\bin:D:\School\Senior\SE3800\team-wolfpack\testng.jar org.testng.remote.RemoteTestNG -serport 49873 -d D:\School\Senior\SE3800\team-wolfpack\calculator\test-output C:\Users\Aaron\AppData\Local\Temp\testng-eclipse-2094205384\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 4 4 2016-01-05 01:35:22.377
+!MESSAGE Error
+!STACK 0
+java.lang.IllegalArgumentException: invalid version "6.8.7beta-201309140723": non-numeric "7beta-201309140723"
+	at org.osgi.framework.Version.parseInt(Version.java:170)
+	at org.osgi.framework.Version.<init>(Version.java:134)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.getRuntimeTestNGVersion(TestNGLaunchConfigurationDelegate.java:399)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.getClasspath(TestNGLaunchConfigurationDelegate.java:340)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.createVMRunner(TestNGLaunchConfigurationDelegate.java:196)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.launchTypes(TestNGLaunchConfigurationDelegate.java:160)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.launch(TestNGLaunchConfigurationDelegate.java:90)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.NumberFormatException: For input string: "7beta-201309140723"
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at org.osgi.framework.Version.parseInt(Version.java:168)
+	... 11 more
+
+!ENTRY org.testng.eclipse 1 0 2016-01-05 01:35:22.384
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: D:\School\Senior\SE3800\team-wolfpack\calculator\bin D:\School\Senior\SE3800\team-wolfpack\testng.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 50909 -d D:\School\Senior\SE3800\team-wolfpack\calculator\test-output C:\Users\Aaron\AppData\Local\Temp\testng-eclipse--1880931596\testng-customsuite.xml
+java -ea -classpath D:\School\Senior\SE3800\team-wolfpack\calculator\bin:D:\School\Senior\SE3800\team-wolfpack\testng.jar org.testng.remote.RemoteTestNG -serport 50909 -d D:\School\Senior\SE3800\team-wolfpack\calculator\test-output C:\Users\Aaron\AppData\Local\Temp\testng-eclipse--1880931596\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 4 4 2016-01-05 01:37:22.474
+!MESSAGE Error
+!STACK 0
+java.lang.IllegalArgumentException: invalid version "6.8.7beta-201309140723": non-numeric "7beta-201309140723"
+	at org.osgi.framework.Version.parseInt(Version.java:170)
+	at org.osgi.framework.Version.<init>(Version.java:134)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.getRuntimeTestNGVersion(TestNGLaunchConfigurationDelegate.java:399)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.getClasspath(TestNGLaunchConfigurationDelegate.java:340)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.createVMRunner(TestNGLaunchConfigurationDelegate.java:196)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.launchTypes(TestNGLaunchConfigurationDelegate.java:160)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.launch(TestNGLaunchConfigurationDelegate.java:90)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.NumberFormatException: For input string: "7beta-201309140723"
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at org.osgi.framework.Version.parseInt(Version.java:168)
+	... 11 more
+
+!ENTRY org.testng.eclipse 1 0 2016-01-05 01:37:22.481
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: D:\School\Senior\SE3800\team-wolfpack\calculator\bin D:\School\Senior\SE3800\team-wolfpack\testng.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 50960 -d D:\School\Senior\SE3800\team-wolfpack\calculator\test-output C:\Users\Aaron\AppData\Local\Temp\testng-eclipse--2820617\testng-customsuite.xml
+java -ea -classpath D:\School\Senior\SE3800\team-wolfpack\calculator\bin:D:\School\Senior\SE3800\team-wolfpack\testng.jar org.testng.remote.RemoteTestNG -serport 50960 -d D:\School\Senior\SE3800\team-wolfpack\calculator\test-output C:\Users\Aaron\AppData\Local\Temp\testng-eclipse--2820617\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 4 4 2016-01-05 01:37:45.401
+!MESSAGE Error
+!STACK 0
+java.lang.IllegalArgumentException: invalid version "6.8.7beta-201309140723": non-numeric "7beta-201309140723"
+	at org.osgi.framework.Version.parseInt(Version.java:170)
+	at org.osgi.framework.Version.<init>(Version.java:134)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.getRuntimeTestNGVersion(TestNGLaunchConfigurationDelegate.java:399)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.getClasspath(TestNGLaunchConfigurationDelegate.java:340)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.createVMRunner(TestNGLaunchConfigurationDelegate.java:196)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.launchTypes(TestNGLaunchConfigurationDelegate.java:160)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.launch(TestNGLaunchConfigurationDelegate.java:90)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.NumberFormatException: For input string: "7beta-201309140723"
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at org.osgi.framework.Version.parseInt(Version.java:168)
+	... 11 more
+
+!ENTRY org.testng.eclipse 1 0 2016-01-05 01:37:45.415
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: D:\School\Senior\SE3800\team-wolfpack\calculator\bin D:\School\Senior\SE3800\team-wolfpack\testng.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 50963 -d D:\School\Senior\SE3800\team-wolfpack\calculator\test-output C:\Users\Aaron\AppData\Local\Temp\testng-eclipse--1912683509\testng-customsuite.xml
+java -ea -classpath D:\School\Senior\SE3800\team-wolfpack\calculator\bin:D:\School\Senior\SE3800\team-wolfpack\testng.jar org.testng.remote.RemoteTestNG -serport 50963 -d D:\School\Senior\SE3800\team-wolfpack\calculator\test-output C:\Users\Aaron\AppData\Local\Temp\testng-eclipse--1912683509\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 4 4 2016-01-05 01:39:35.505
+!MESSAGE Error
+!STACK 0
+java.lang.IllegalArgumentException: invalid version "6.8.7beta-201309140723": non-numeric "7beta-201309140723"
+	at org.osgi.framework.Version.parseInt(Version.java:170)
+	at org.osgi.framework.Version.<init>(Version.java:134)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.getRuntimeTestNGVersion(TestNGLaunchConfigurationDelegate.java:399)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.getClasspath(TestNGLaunchConfigurationDelegate.java:340)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.createVMRunner(TestNGLaunchConfigurationDelegate.java:196)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.launchTypes(TestNGLaunchConfigurationDelegate.java:160)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.launch(TestNGLaunchConfigurationDelegate.java:90)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.NumberFormatException: For input string: "7beta-201309140723"
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at org.osgi.framework.Version.parseInt(Version.java:168)
+	... 11 more
+
+!ENTRY org.testng.eclipse 1 0 2016-01-05 01:39:35.510
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: D:\School\Senior\SE3800\team-wolfpack\calculator\bin D:\School\Senior\SE3800\team-wolfpack\testng.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 51016 -d D:\School\Senior\SE3800\team-wolfpack\calculator\test-output C:\Users\Aaron\AppData\Local\Temp\testng-eclipse--377749936\testng-customsuite.xml
+java -ea -classpath D:\School\Senior\SE3800\team-wolfpack\calculator\bin:D:\School\Senior\SE3800\team-wolfpack\testng.jar org.testng.remote.RemoteTestNG -serport 51016 -d D:\School\Senior\SE3800\team-wolfpack\calculator\test-output C:\Users\Aaron\AppData\Local\Temp\testng-eclipse--377749936\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 4 4 2016-01-05 01:39:51.173
+!MESSAGE Error
+!STACK 0
+java.lang.IllegalArgumentException: invalid version "6.8.7beta-201309140723": non-numeric "7beta-201309140723"
+	at org.osgi.framework.Version.parseInt(Version.java:170)
+	at org.osgi.framework.Version.<init>(Version.java:134)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.getRuntimeTestNGVersion(TestNGLaunchConfigurationDelegate.java:399)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.getClasspath(TestNGLaunchConfigurationDelegate.java:340)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.createVMRunner(TestNGLaunchConfigurationDelegate.java:196)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.launchTypes(TestNGLaunchConfigurationDelegate.java:160)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.launch(TestNGLaunchConfigurationDelegate.java:90)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.NumberFormatException: For input string: "7beta-201309140723"
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at org.osgi.framework.Version.parseInt(Version.java:168)
+	... 11 more
+
+!ENTRY org.testng.eclipse 1 0 2016-01-05 01:39:51.179
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: D:\School\Senior\SE3800\team-wolfpack\calculator\bin D:\School\Senior\SE3800\team-wolfpack\testng.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 51018 -d D:\School\Senior\SE3800\team-wolfpack\calculator\test-output C:\Users\Aaron\AppData\Local\Temp\testng-eclipse-497199711\testng-customsuite.xml
+java -ea -classpath D:\School\Senior\SE3800\team-wolfpack\calculator\bin:D:\School\Senior\SE3800\team-wolfpack\testng.jar org.testng.remote.RemoteTestNG -serport 51018 -d D:\School\Senior\SE3800\team-wolfpack\calculator\test-output C:\Users\Aaron\AppData\Local\Temp\testng-eclipse-497199711\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 4 4 2016-01-05 01:39:53.944
+!MESSAGE Error
+!STACK 0
+java.lang.IllegalArgumentException: invalid version "6.8.7beta-201309140723": non-numeric "7beta-201309140723"
+	at org.osgi.framework.Version.parseInt(Version.java:170)
+	at org.osgi.framework.Version.<init>(Version.java:134)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.getRuntimeTestNGVersion(TestNGLaunchConfigurationDelegate.java:399)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.getClasspath(TestNGLaunchConfigurationDelegate.java:340)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.createVMRunner(TestNGLaunchConfigurationDelegate.java:196)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.launchTypes(TestNGLaunchConfigurationDelegate.java:160)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.launch(TestNGLaunchConfigurationDelegate.java:90)
+	at com.mountainminds.eclemma.core.launching.CoverageLauncher.launch(CoverageLauncher.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.NumberFormatException: For input string: "7beta-201309140723"
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at org.osgi.framework.Version.parseInt(Version.java:168)
+	... 12 more
+
+!ENTRY org.testng.eclipse 1 0 2016-01-05 01:39:53.951
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: D:\School\Senior\SE3800\team-wolfpack\calculator\bin D:\School\Senior\SE3800\team-wolfpack\testng.jar
+  VMArgs:    -ea -javaagent:D:\Programs\eclipse\eclipse-java\configuration\org.eclipse.osgi\464\0\.cp\jacocoagent.jar=includes=*,excludes=,exclclassloader=sun.reflect.DelegatingClassLoader,output=tcpclient,port=51020
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 51021 -d D:\School\Senior\SE3800\team-wolfpack\calculator\test-output C:\Users\Aaron\AppData\Local\Temp\testng-eclipse--1601620863\testng-customsuite.xml
+java -ea -javaagent:D:\Programs\eclipse\eclipse-java\configuration\org.eclipse.osgi\464\0\.cp\jacocoagent.jar=includes=*,excludes=,exclclassloader=sun.reflect.DelegatingClassLoader,output=tcpclient,port=51020 -classpath D:\School\Senior\SE3800\team-wolfpack\calculator\bin:D:\School\Senior\SE3800\team-wolfpack\testng.jar org.testng.remote.RemoteTestNG -serport 51021 -d D:\School\Senior\SE3800\team-wolfpack\calculator\test-output C:\Users\Aaron\AppData\Local\Temp\testng-eclipse--1601620863\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 4 4 2016-01-05 01:40:54.593
+!MESSAGE Error
+!STACK 0
+java.lang.IllegalArgumentException: invalid version "6.8.7beta-201309140723": non-numeric "7beta-201309140723"
+	at org.osgi.framework.Version.parseInt(Version.java:170)
+	at org.osgi.framework.Version.<init>(Version.java:134)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.getRuntimeTestNGVersion(TestNGLaunchConfigurationDelegate.java:399)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.getClasspath(TestNGLaunchConfigurationDelegate.java:340)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.createVMRunner(TestNGLaunchConfigurationDelegate.java:196)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.launchTypes(TestNGLaunchConfigurationDelegate.java:160)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.launch(TestNGLaunchConfigurationDelegate.java:90)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.NumberFormatException: For input string: "7beta-201309140723"
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at org.osgi.framework.Version.parseInt(Version.java:168)
+	... 11 more
+
+!ENTRY org.testng.eclipse 1 0 2016-01-05 01:40:54.599
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: D:\School\Senior\SE3800\team-wolfpack\calculator\bin D:\School\Senior\SE3800\team-wolfpack\testng.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 51044 -d D:\School\Senior\SE3800\team-wolfpack\calculator\test-output C:\Users\Aaron\AppData\Local\Temp\testng-eclipse--524015815\testng-customsuite.xml
+java -ea -classpath D:\School\Senior\SE3800\team-wolfpack\calculator\bin:D:\School\Senior\SE3800\team-wolfpack\testng.jar org.testng.remote.RemoteTestNG -serport 51044 -d D:\School\Senior\SE3800\team-wolfpack\calculator\test-output C:\Users\Aaron\AppData\Local\Temp\testng-eclipse--524015815\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 4 4 2016-01-05 01:40:56.632
+!MESSAGE Error
+!STACK 0
+java.lang.IllegalArgumentException: invalid version "6.8.7beta-201309140723": non-numeric "7beta-201309140723"
+	at org.osgi.framework.Version.parseInt(Version.java:170)
+	at org.osgi.framework.Version.<init>(Version.java:134)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.getRuntimeTestNGVersion(TestNGLaunchConfigurationDelegate.java:399)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.getClasspath(TestNGLaunchConfigurationDelegate.java:340)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.createVMRunner(TestNGLaunchConfigurationDelegate.java:196)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.launchTypes(TestNGLaunchConfigurationDelegate.java:160)
+	at org.testng.eclipse.launch.TestNGLaunchConfigurationDelegate.launch(TestNGLaunchConfigurationDelegate.java:90)
+	at com.mountainminds.eclemma.core.launching.CoverageLauncher.launch(CoverageLauncher.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.NumberFormatException: For input string: "7beta-201309140723"
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at org.osgi.framework.Version.parseInt(Version.java:168)
+	... 12 more
+
+!ENTRY org.testng.eclipse 1 0 2016-01-05 01:40:56.637
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: D:\School\Senior\SE3800\team-wolfpack\calculator\bin D:\School\Senior\SE3800\team-wolfpack\testng.jar
+  VMArgs:    -ea -javaagent:D:\Programs\eclipse\eclipse-java\configuration\org.eclipse.osgi\464\0\.cp\jacocoagent.jar=includes=*,excludes=,exclclassloader=sun.reflect.DelegatingClassLoader,output=tcpclient,port=51047
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 51048 -d D:\School\Senior\SE3800\team-wolfpack\calculator\test-output C:\Users\Aaron\AppData\Local\Temp\testng-eclipse-281648382\testng-customsuite.xml
+java -ea -javaagent:D:\Programs\eclipse\eclipse-java\configuration\org.eclipse.osgi\464\0\.cp\jacocoagent.jar=includes=*,excludes=,exclclassloader=sun.reflect.DelegatingClassLoader,output=tcpclient,port=51047 -classpath D:\School\Senior\SE3800\team-wolfpack\calculator\bin:D:\School\Senior\SE3800\team-wolfpack\testng.jar org.testng.remote.RemoteTestNG -serport 51048 -d D:\School\Senior\SE3800\team-wolfpack\calculator\test-output C:\Users\Aaron\AppData\Local\Temp\testng-eclipse-281648382\testng-customsuite.xml
