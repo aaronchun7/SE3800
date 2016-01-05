@@ -5,7 +5,7 @@
     <classes>
       <class name="test.testCalculator">
         <methods>
-          <include name="testDiv"/>
+          <include name="testClear"/>
         </methods>
       </class> <!-- test.testCalculator -->
     </classes>

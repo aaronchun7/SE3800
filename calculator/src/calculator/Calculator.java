@@ -278,7 +278,7 @@ public class Calculator {
 		int h = history.size();
 		if(h > 0){
 			System.out.println("Printing out calculation history.");
-			for(int i = 0; i < h ;++i){
+			for(int i = 0; i < h ; ++i){
 				System.out.println(
 						(i + 1) + " | " + history.get(h-(1 + i)));
 			}
@@ -351,6 +351,15 @@ public class Calculator {
 			wumbo = false;
 			System.out.println("Mini-mode.");
 		}
+	}
+	
+	/**
+	 * Getter method for the history object.
+	 * @author kuczynskij
+	 * @return history
+	 */
+	public static ArrayList<Calculation> getHistory(){
+		return history;
 	}
 	
 	/**
