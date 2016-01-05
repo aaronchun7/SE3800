@@ -3,7 +3,8 @@
               Any modifications will be overwritten.
               To include a user specific buildfile here, simply create one in the same
               directory with the processing instruction <?eclipse.ant.import?>
-              as the first entry and export the buildfile again. --><project basedir="." default="build" name="team-wolfpack">
+              as the first entry and export the buildfile again. -->
+<project basedir="." default="build" name="team-wolfpack">
     <property environment="env"/>
     <property name="ECLIPSE_HOME" value="../../../../../../../../Program Files/eclipse/"/>
     <property name="debuglevel" value="source,lines,vars"/>
@@ -51,6 +52,11 @@
     </target>
     <target name="Calculator">
         <java classname="calculator.Calculator" failonerror="true" fork="yes">
+            <classpath refid="team-wolfpack.classpath"/>
+        </java>
+    </target>
+	<target name="testCalculator">
+        <java classname="test.testCalculator" failonerror="true" fork="yes">
             <classpath refid="team-wolfpack.classpath"/>
         </java>
     </target>
