@@ -40,11 +40,15 @@ public class Calculator {
 		getUserInput();
 	}
 	
+	public static void setScanner(Scanner s){
+		in = s;
+	}
+	
 	/**
 	 * Gets user input.
 	 * @author kuczynskij
 	 */
-	private static void getUserInput(){
+	public static void getUserInput(){
 		System.out.print("Enter command: ");
 		String cmd = in.next();
 		switch(cmd){
@@ -302,6 +306,33 @@ public class Calculator {
 	 * @author chuna
 	 */
 	public void wumbo(){
-		//TODO
+		if (!wumbo){
+			wumbo = true;
+			System.out.println("I wumbo, you wumbo, he, she, me, "
+					+ "wumbo. Wumbo; wumboing; we'll have thee "
+					+ "wumbo; wumborama; wumbology, the study of "
+					+ "wumbo! It's first grade stuff, User!");
+		}else{
+			wumbo = false;
+			System.out.println("Mini-mode.");
+		}
+	}
+	
+	/**
+	 * Getter method for the history object.
+	 * @author kuczynskij
+	 * @return history
+	 */
+	public static ArrayList<Calculation> getHistory(){
+		return history;
+	}
+	
+	/**
+	 * Getter method for the boolean wumbo.
+	 * @author kuczynskij
+	 * @return wumbo
+	 */
+	public static boolean getWumbo(){
+		return wumbo;
 	}
 }

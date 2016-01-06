@@ -1,7 +1,11 @@
 package test;
 
+import java.util.Scanner;
+
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import calculator.Calculator;
 import static org.testng.Assert.*;
 
 public class testCalculator {
@@ -14,7 +18,15 @@ public class testCalculator {
 	 */
 	@Test
 	public void testAdd(){
+		Scanner in = new Scanner("add 1 2 3\n"
+				+ "add 2147483647 1\n"
+				+ "add -2147483648 -1\n"
+				+ "add 4 -5 6\n"
+				+ "quit");
 		
+		Calculator.setScanner(in);
+		Calculator.getUserInput();
+		assert(Calculator.getHistory().get(4).getAns() == 6);
 	}
 	
 	/**

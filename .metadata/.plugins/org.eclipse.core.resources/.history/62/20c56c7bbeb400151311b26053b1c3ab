@@ -1,0 +1,92 @@
+package test;
+
+import java.util.Scanner;
+
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import calculator.Calculator;
+import static org.testng.Assert.*;
+
+public class testCalculator {
+
+	
+	
+	/**
+	 * Tests add() method.
+	 * @author chuna
+	 */
+	@Test
+	public void testAdd(){
+		Scanner in = new Scanner("add 1 2 3\n"
+				+ "add 2147483647 1\n"
+				+ "add -2147483648 -1\n"
+				+ "add 4 -5 6");
+		
+		Calculator.getUserInput();
+		assert(Calculator.getHistory().get(4).getAns() == 6);
+	}
+	
+	/**
+	 * Tests sub() method.
+	 * @author kuczynskij
+	 */
+	@Test
+	public void testSub(){
+		
+	}
+	
+	/**
+	 * Tests mult() method.
+	 * @author chuna
+	 */
+	@Test
+	public void testMult(){
+		
+	}
+	
+	/**
+	 * Tests div() method.
+	 * @author kuczynskij
+	 */
+	@Test
+	public void testDiv(){
+		
+	}
+	
+	/**
+	 * Tests hist() method.
+	 * @author chuna
+	 */
+	@Test
+	public void testHist(){
+		
+	}
+	
+	/**
+	 * Tests clear() method.
+	 * @author kuczynskij
+	 */
+	@Test
+	public void testClear(){
+		
+	}
+	
+	/**
+	 * Tests reuse() method.
+	 * @author chuna
+	 */
+	@Test
+	public void testReuse(){
+		
+	}
+	
+	/**
+	 * Tests wumbo() method.
+	 * @author kuczynskij
+	 */
+	@Test
+	public void testWumbo(){
+		
+	}
+}
