@@ -4,14 +4,26 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+<<<<<<< HEAD:calculator/src/test/testCalculator.java
 import org.testng.annotations.DataProvider;
+=======
+>>>>>>> a388fe57f95cce90852f741fb5d6f3c23fc40026:calculator/src/test/TestCalculator.java
 import org.testng.annotations.Test;
 
 import calculator.Calculation;
 import calculator.Calculator;
 import static org.testng.Assert.*;
 
+<<<<<<< HEAD:calculator/src/test/testCalculator.java
 public class testCalculator {
+=======
+/**
+ * Test the Calculator class.
+ * @author Jim Kuczynski (kuczynskij)
+ * @author Aarom Chun (chuna)
+ */
+public class TestCalculator {
+>>>>>>> a388fe57f95cce90852f741fb5d6f3c23fc40026:calculator/src/test/TestCalculator.java
 
 	
 	/**
@@ -22,6 +34,7 @@ public class testCalculator {
 	@Test
 	public void testGetUserInput() throws Exception{
 		Calculator.clear();
+<<<<<<< HEAD:calculator/src/test/testCalculator.java
 //		Calculator.getUserInput("add 1 2 3\n"
 //				+ "sub 1 2 3\n"
 //				+ "mult 1 2 3\n"
@@ -36,6 +49,8 @@ public class testCalculator {
 //				+ "help\n"
 //				+ "lsdjfl\n"
 //				+ "quit");
+=======
+>>>>>>> a388fe57f95cce90852f741fb5d6f3c23fc40026:calculator/src/test/TestCalculator.java
 		Scanner in = new Scanner("add 1 2 3\n"
 				+ "sub 1 2 3\n"
 				+ "mult 1 2 3\n"

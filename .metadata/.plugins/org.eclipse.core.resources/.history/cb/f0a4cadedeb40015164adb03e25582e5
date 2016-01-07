@@ -34,6 +34,10 @@ public class Calculator {
 		help();
 		try {
 			getUserInput();
+<<<<<<< HEAD
+//			getUserInput(null);
+=======
+>>>>>>> a388fe57f95cce90852f741fb5d6f3c23fc40026
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -47,6 +51,10 @@ public class Calculator {
 				+ "terminal calculator!");
 		System.out.println("Supported commands: add, sub, mult, div,"
 				+ " hist, clear, reuse, wumbo, help");
+	}
+	
+	public static void setScanner(Scanner s){
+		in = s;
 	}
 	
 	/**
@@ -63,7 +71,19 @@ public class Calculator {
 	 * @throws Exception 
 	 */
 	public static String getUserInput() throws Exception{
+<<<<<<< HEAD
+//	public static String getUserInput(String cmd) throws Exception{
 		System.out.print("Enter command: ");
+//		if(cmd == null){
+//			in = new Scanner(System.in);
+//			cmd = in.next();
+//		}else{
+//			in = new Scanner(cmd);
+//			cmd = in.next();
+//		}
+=======
+		System.out.print("Enter command: ");
+>>>>>>> a388fe57f95cce90852f741fb5d6f3c23fc40026
 		String cmd = in.next();
 		switch(cmd){
 			case "add":
@@ -123,6 +143,10 @@ public class Calculator {
 				break;
 			}
 		getUserInput();
+<<<<<<< HEAD
+//		getUserInput(null);
+=======
+>>>>>>> a388fe57f95cce90852f741fb5d6f3c23fc40026
 		return null;
 	}
 	
