@@ -1,19 +1,20 @@
 package test;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 import org.testng.annotations.Test;
 
 import calculator.Calculation;
 import calculator.Calculator;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
- * Tests the Calculator class.
+ * Test the Calculator class.
  * @author Jim Kuczynski (kuczynskij)
- * @author Aaron Chun (chuna)
+ * @author Aarom Chun (chuna)
  */
-public class testCalculator {
+public class TestCalculator {
 
 	/**
 	 * Tests add() method.
@@ -23,7 +24,7 @@ public class testCalculator {
 	@Test
 	public void testGetUserInput() throws Exception{
 		Calculator.clear();
-		Calculator.getUserInput("add 1 2 3\n"
+		Scanner in = new Scanner("add 1 2 3\n"
 				+ "sub 1 2 3\n"
 				+ "mult 1 2 3\n"
 				+ "div 10 5 2\n"
@@ -37,6 +38,8 @@ public class testCalculator {
 				+ "help\n"
 				+ "lsdjfl\n"
 				+ "quit");
+		Calculator.setScanner(in);
+		Calculator.getUserInput();
 	}
 	
 	/**
