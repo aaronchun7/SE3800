@@ -33,7 +33,8 @@ public class Calculator {
 		in = new Scanner(System.in);
 		help();
 		try {
-			getUserInput(null);
+			getUserInput();
+//			getUserInput(null);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -49,20 +50,26 @@ public class Calculator {
 				+ " hist, clear, reuse, wumbo, help");
 	}
 	
+	public static void setScanner(Scanner s){
+		in = s;
+	}
+	
 	/**
 	 * Gets user input.
 	 * @author kuczynskij
 	 * @throws Exception 
 	 */
-	public static String getUserInput(String cmd) throws Exception{
+	public static String getUserInput() throws Exception{
+//	public static String getUserInput(String cmd) throws Exception{
 		System.out.print("Enter command: ");
-		if(cmd == null){
-			in = new Scanner(System.in);
-			cmd = in.next();
-		}else{
-			in = new Scanner(cmd);
-			cmd = in.next();
-		}
+//		if(cmd == null){
+//			in = new Scanner(System.in);
+//			cmd = in.next();
+//		}else{
+//			in = new Scanner(cmd);
+//			cmd = in.next();
+//		}
+		String cmd = in.next();
 		switch(cmd){
 			case "add":
 				if(!wumbo)
@@ -80,11 +87,19 @@ public class Calculator {
 				if(!wumbo)
 					mult(null);
 				else
-					div(null);
+					try{
+						div(null);
+					}catch(Exception e){
+						System.out.println("Error: Cannot divide by zero.");
+					}
 				break;
 			case "div":
 				if(!wumbo)
-					div(null);
+					try{
+						div(null);
+					}catch(Exception e){
+						System.out.println("Error: Cannot divide by zero.");
+					}
 				else
 					mult(null);
 				break;
@@ -102,6 +117,7 @@ public class Calculator {
 				break;
 			case "quit":
 				System.out.println("Thanks for using me I guess...");
+//				System.exit(0);
 				return null;
 			default:
 				 //Clear the buffer of any extra things input 
@@ -111,7 +127,8 @@ public class Calculator {
 						+ " invalid command.");
 				break;
 			}
-		getUserInput(null);
+		getUserInput();
+//		getUserInput(null);
 		return null;
 	}
 	
@@ -274,7 +291,6 @@ public class Calculator {
 				}
 			}
 			if(zeroDivision){
-				System.out.println("Error: Cannot divide by zero.");
 				throw new Exception("divide by zero");
 			}else{
 				System.out.println("The quotient is: " + quot);
