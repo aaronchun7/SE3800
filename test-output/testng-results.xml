@@ -1,61 +1,154 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="10" passed="10">
+<testng-results skipped="0" failed="3" total="10" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="322" started-at="2016-01-05T23:19:55Z" finished-at="2016-01-05T23:19:56Z">
+  <suite name="Default suite" duration-ms="123" started-at="2016-01-08T03:59:07Z" finished-at="2016-01-08T03:59:07Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="322" started-at="2016-01-05T23:19:55Z" finished-at="2016-01-05T23:19:56Z">
-      <class name="test.testCalculator">
-        <test-method status="PASS" signature="testAdd()[pri:0, instance:test.testCalculator@3835c46]" name="testAdd" duration-ms="58" started-at="2016-01-05T17:19:55Z" finished-at="2016-01-05T17:19:55Z">
+    <test name="Default test" duration-ms="123" started-at="2016-01-08T03:59:07Z" finished-at="2016-01-08T03:59:07Z">
+      <class name="test.TestCalculator">
+        <test-method status="PASS" signature="testAdd()[pri:0, instance:test.TestCalculator@18e8568]" name="testAdd" duration-ms="27" started-at="2016-01-07T21:59:07Z" finished-at="2016-01-07T21:59:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAdd -->
-        <test-method status="PASS" signature="testClear()[pri:0, instance:test.testCalculator@3835c46]" name="testClear" duration-ms="3" started-at="2016-01-05T17:19:55Z" finished-at="2016-01-05T17:19:55Z">
+        <test-method status="PASS" signature="testClear()[pri:0, instance:test.TestCalculator@18e8568]" name="testClear" duration-ms="2" started-at="2016-01-07T21:59:07Z" finished-at="2016-01-07T21:59:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testClear -->
-        <test-method status="PASS" signature="testDiv()[pri:0, instance:test.testCalculator@3835c46]" name="testDiv" duration-ms="14" started-at="2016-01-05T17:19:55Z" finished-at="2016-01-05T17:19:55Z">
+        <test-method status="FAIL" signature="testDiv()[pri:0, instance:test.TestCalculator@18e8568]" name="testDiv" duration-ms="3" started-at="2016-01-07T21:59:07Z" finished-at="2016-01-07T21:59:07Z">
+          <exception class="java.lang.AssertionError">
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError
+	at test.TestCalculator.testDiv(TestCalculator.java:114)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDiv -->
-        <test-method status="PASS" signature="testGetUserInput()[pri:0, instance:test.testCalculator@3835c46]" name="testGetUserInput" duration-ms="67" started-at="2016-01-05T17:19:55Z" finished-at="2016-01-05T17:19:55Z">
+        <test-method status="PASS" signature="testGetUserInput()[pri:0, instance:test.TestCalculator@18e8568]" name="testGetUserInput" duration-ms="25" started-at="2016-01-07T21:59:07Z" finished-at="2016-01-07T21:59:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetUserInput -->
-        <test-method status="PASS" signature="testHist()[pri:0, instance:test.testCalculator@3835c46]" name="testHist" duration-ms="6" started-at="2016-01-05T17:19:55Z" finished-at="2016-01-05T17:19:56Z">
+        <test-method status="FAIL" signature="testHist()[pri:0, instance:test.TestCalculator@18e8568]" name="testHist" duration-ms="5" started-at="2016-01-07T21:59:07Z" finished-at="2016-01-07T21:59:07Z">
+          <exception class="java.lang.AssertionError">
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError
+	at test.TestCalculator.testHist(TestCalculator.java:149)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testHist -->
-        <test-method status="PASS" signature="testMult()[pri:0, instance:test.testCalculator@3835c46]" name="testMult" duration-ms="10" started-at="2016-01-05T17:19:56Z" finished-at="2016-01-05T17:19:56Z">
+        <test-method status="PASS" signature="testMult()[pri:0, instance:test.TestCalculator@18e8568]" name="testMult" duration-ms="5" started-at="2016-01-07T21:59:07Z" finished-at="2016-01-07T21:59:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMult -->
-        <test-method status="PASS" signature="testReuse()[pri:0, instance:test.testCalculator@3835c46]" name="testReuse" duration-ms="6" started-at="2016-01-05T17:19:56Z" finished-at="2016-01-05T17:19:56Z">
+        <test-method status="FAIL" signature="testReuse()[pri:0, instance:test.TestCalculator@18e8568]" name="testReuse" duration-ms="3" started-at="2016-01-07T21:59:07Z" finished-at="2016-01-07T21:59:07Z">
+          <exception class="java.lang.AssertionError">
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError
+	at test.TestCalculator.testReuse(TestCalculator.java:190)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testReuse -->
-        <test-method status="PASS" signature="testSub()[pri:0, instance:test.testCalculator@3835c46]" name="testSub" duration-ms="13" started-at="2016-01-05T17:19:56Z" finished-at="2016-01-05T17:19:56Z">
+        <test-method status="PASS" signature="testSub()[pri:0, instance:test.TestCalculator@18e8568]" name="testSub" duration-ms="8" started-at="2016-01-07T21:59:07Z" finished-at="2016-01-07T21:59:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSub -->
-        <test-method status="PASS" signature="testWumbo()[pri:0, instance:test.testCalculator@3835c46]" name="testWumbo" duration-ms="4" started-at="2016-01-05T17:19:56Z" finished-at="2016-01-05T17:19:56Z">
+        <test-method status="PASS" signature="testWumbo()[pri:0, instance:test.TestCalculator@18e8568]" name="testWumbo" duration-ms="3" started-at="2016-01-07T21:59:07Z" finished-at="2016-01-07T21:59:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testWumbo -->
-        <test-method status="PASS" signature="testZeroDivide()[pri:0, instance:test.testCalculator@3835c46]" name="testZeroDivide" duration-ms="3" started-at="2016-01-05T17:19:56Z" finished-at="2016-01-05T17:19:56Z">
+        <test-method status="PASS" signature="testZeroDivide()[pri:0, instance:test.TestCalculator@18e8568]" name="testZeroDivide" duration-ms="2" started-at="2016-01-07T21:59:07Z" finished-at="2016-01-07T21:59:07Z">
           <exception class="java.lang.Exception">
             <message>
               <![CDATA[divide by zero]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.Exception: divide by zero
-	at calculator.Calculator.div(Calculator.java:285)
-	at test.testCalculator.testZeroDivide(testCalculator.java:115)
+	at calculator.Calculator.div(Calculator.java:288)
+	at test.TestCalculator.testZeroDivide(TestCalculator.java:127)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
 	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
@@ -82,7 +175,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testZeroDivide -->
-      </class> <!-- test.testCalculator -->
+      </class> <!-- test.TestCalculator -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

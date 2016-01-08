@@ -52,7 +52,7 @@ public class TestCalculator {
 	@Test
 	public void testAdd(){
 		List <Integer> l = new ArrayList<Integer>(){{add(1);add(2);add(3);}};
-		assert(Calculator.add(l) == 0);//6);
+		assert(Calculator.add(l) == 6);
 		l = new ArrayList<Integer>(){{add(Integer.MAX_VALUE);add(1);}};
 		assert(Calculator.add(l) == Integer.MAX_VALUE);
 		l = new ArrayList<Integer>(){{add(Integer.MIN_VALUE);add(-1);}};
