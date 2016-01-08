@@ -268,7 +268,7 @@ public class Calculator {
 	 * @return quotient 
 	 */
 	public static int div(List<Integer> list) throws Exception{
-		zeroDivision = true;//false;
+		zeroDivision = false;
 		calc = new Calculation("div");
 		int quot = 0;
 		if (list == null)
