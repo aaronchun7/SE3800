@@ -4,10 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import calculator.Calculation;
 import calculator.Calculator;
+import static org.testng.Assert.*;
 
 /**
  * Test the Calculator class.
@@ -15,7 +17,7 @@ import calculator.Calculator;
  * @author Aarom Chun (chuna)
  */
 public class TestCalculator {
-
+	
 	/**
 	 * Tests add() method.
 	 * @author chuna

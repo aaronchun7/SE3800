@@ -1,44 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="8" passed="8">
+<testng-results skipped="0" failed="0" total="10" passed="10">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="113" started-at="2016-01-05T15:16:07Z" finished-at="2016-01-05T15:16:07Z">
+  <suite name="Default suite" duration-ms="89" started-at="2016-01-07T01:05:30Z" finished-at="2016-01-07T01:05:31Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="113" started-at="2016-01-05T15:16:07Z" finished-at="2016-01-05T15:16:07Z">
+    <test name="Default test" duration-ms="89" started-at="2016-01-07T01:05:30Z" finished-at="2016-01-07T01:05:31Z">
       <class name="test.testCalculator">
-        <test-method status="PASS" signature="testAdd()[pri:0, instance:test.testCalculator@1ea9f6af]" name="testAdd" duration-ms="33" started-at="2016-01-05T09:16:07Z" finished-at="2016-01-05T09:16:07Z">
+        <test-method status="PASS" signature="testAdd()[pri:0, instance:test.testCalculator@7bfcd12c]" name="testAdd" duration-ms="18" started-at="2016-01-06T19:05:30Z" finished-at="2016-01-06T19:05:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAdd -->
-        <test-method status="PASS" signature="testClear()[pri:0, instance:test.testCalculator@1ea9f6af]" name="testClear" duration-ms="4" started-at="2016-01-05T09:16:07Z" finished-at="2016-01-05T09:16:07Z">
+        <test-method status="PASS" signature="testClear()[pri:0, instance:test.testCalculator@7bfcd12c]" name="testClear" duration-ms="3" started-at="2016-01-06T19:05:30Z" finished-at="2016-01-06T19:05:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testClear -->
-        <test-method status="PASS" signature="testDiv()[pri:0, instance:test.testCalculator@1ea9f6af]" name="testDiv" duration-ms="6" started-at="2016-01-05T09:16:07Z" finished-at="2016-01-05T09:16:07Z">
+        <test-method status="PASS" signature="testDiv()[pri:0, instance:test.testCalculator@7bfcd12c]" name="testDiv" duration-ms="4" started-at="2016-01-06T19:05:31Z" finished-at="2016-01-06T19:05:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDiv -->
-        <test-method status="PASS" signature="testHist()[pri:0, instance:test.testCalculator@1ea9f6af]" name="testHist" duration-ms="4" started-at="2016-01-05T09:16:07Z" finished-at="2016-01-05T09:16:07Z">
+        <test-method status="PASS" signature="testGetUserInput()[pri:0, instance:test.testCalculator@7bfcd12c]" name="testGetUserInput" duration-ms="19" started-at="2016-01-06T19:05:31Z" finished-at="2016-01-06T19:05:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetUserInput -->
+        <test-method status="PASS" signature="testHist()[pri:0, instance:test.testCalculator@7bfcd12c]" name="testHist" duration-ms="2" started-at="2016-01-06T19:05:31Z" finished-at="2016-01-06T19:05:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testHist -->
-        <test-method status="PASS" signature="testMult()[pri:0, instance:test.testCalculator@1ea9f6af]" name="testMult" duration-ms="6" started-at="2016-01-05T09:16:07Z" finished-at="2016-01-05T09:16:07Z">
+        <test-method status="PASS" signature="testMult()[pri:0, instance:test.testCalculator@7bfcd12c]" name="testMult" duration-ms="4" started-at="2016-01-06T19:05:31Z" finished-at="2016-01-06T19:05:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMult -->
-        <test-method status="PASS" signature="testReuse()[pri:0, instance:test.testCalculator@1ea9f6af]" name="testReuse" duration-ms="6" started-at="2016-01-05T09:16:07Z" finished-at="2016-01-05T09:16:07Z">
+        <test-method status="PASS" signature="testReuse()[pri:0, instance:test.testCalculator@7bfcd12c]" name="testReuse" duration-ms="2" started-at="2016-01-06T19:05:31Z" finished-at="2016-01-06T19:05:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testReuse -->
-        <test-method status="PASS" signature="testSub()[pri:0, instance:test.testCalculator@1ea9f6af]" name="testSub" duration-ms="6" started-at="2016-01-05T09:16:07Z" finished-at="2016-01-05T09:16:07Z">
+        <test-method status="PASS" signature="testSub()[pri:0, instance:test.testCalculator@7bfcd12c]" name="testSub" duration-ms="5" started-at="2016-01-06T19:05:31Z" finished-at="2016-01-06T19:05:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSub -->
-        <test-method status="PASS" signature="testWumbo()[pri:0, instance:test.testCalculator@1ea9f6af]" name="testWumbo" duration-ms="1" started-at="2016-01-05T09:16:07Z" finished-at="2016-01-05T09:16:07Z">
+        <test-method status="PASS" signature="testWumbo()[pri:0, instance:test.testCalculator@7bfcd12c]" name="testWumbo" duration-ms="1" started-at="2016-01-06T19:05:31Z" finished-at="2016-01-06T19:05:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testWumbo -->
+        <test-method status="PASS" signature="testZeroDivide()[pri:0, instance:test.testCalculator@7bfcd12c]" name="testZeroDivide" duration-ms="1" started-at="2016-01-06T19:05:31Z" finished-at="2016-01-06T19:05:31Z">
+          <exception class="java.lang.Exception">
+            <message>
+              <![CDATA[divide by zero]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Exception: divide by zero
+	at calculator.Calculator.div(Calculator.java:294)
+	at test.testCalculator.testZeroDivide(testCalculator.java:139)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Exception -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testZeroDivide -->
       </class> <!-- test.testCalculator -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\Aaron\AppData\Local\Temp\testng-eclipse--6199332\testng-customsuite.xml</span>
+                    <span>C:\Users\Aaron\AppData\Local\Temp\testng-eclipse--301989968\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">8 methods,   8 passed</span>
+                    <span class="method-stats">10 methods,   10 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -116,6 +116,11 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="test.testCalculator" hash-for-method="testGetUserInput">testGetUserInput</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="test.testCalculator" hash-for-method="testHist">testHist</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -137,6 +142,11 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="test.testCalculator" hash-for-method="testWumbo">testWumbo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="test.testCalculator" hash-for-method="testZeroDivide">testZeroDivide</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -180,6 +190,13 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="testGetUserInput">
+                  </a> <!-- testGetUserInput -->
+                  <span class="method-name">testGetUserInput</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="testHist">
                   </a> <!-- testHist -->
                   <span class="method-name">testHist</span>
@@ -213,12 +230,19 @@
                   <span class="method-name">testWumbo</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testZeroDivide">
+                  </a> <!-- testZeroDivide -->
+                  <span class="method-name">testZeroDivide</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Aaron\AppData\Local\Temp\testng-eclipse--6199332\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Aaron\AppData\Local\Temp\testng-eclipse--301989968\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -267,44 +291,52 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(8);
+data.addRows(10);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testAdd')
+data.setCell(0, 1, 'testGetUserInput')
 data.setCell(0, 2, 'test.testCalculator')
-data.setCell(0, 3, 33);
+data.setCell(0, 3, 19);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testMult')
+data.setCell(1, 1, 'testAdd')
 data.setCell(1, 2, 'test.testCalculator')
-data.setCell(1, 3, 6);
+data.setCell(1, 3, 18);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'testSub')
 data.setCell(2, 2, 'test.testCalculator')
-data.setCell(2, 3, 6);
+data.setCell(2, 3, 5);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testReuse')
+data.setCell(3, 1, 'testDiv')
 data.setCell(3, 2, 'test.testCalculator')
-data.setCell(3, 3, 6);
+data.setCell(3, 3, 4);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testDiv')
+data.setCell(4, 1, 'testMult')
 data.setCell(4, 2, 'test.testCalculator')
-data.setCell(4, 3, 6);
+data.setCell(4, 3, 4);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'testHist')
+data.setCell(5, 1, 'testClear')
 data.setCell(5, 2, 'test.testCalculator')
-data.setCell(5, 3, 4);
+data.setCell(5, 3, 3);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'testClear')
+data.setCell(6, 1, 'testHist')
 data.setCell(6, 2, 'test.testCalculator')
-data.setCell(6, 3, 4);
+data.setCell(6, 3, 2);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'testWumbo')
+data.setCell(7, 1, 'testReuse')
 data.setCell(7, 2, 'test.testCalculator')
-data.setCell(7, 3, 1);
+data.setCell(7, 3, 2);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'testWumbo')
+data.setCell(8, 2, 'test.testCalculator')
+data.setCell(8, 3, 1);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'testZeroDivide')
+data.setCell(9, 2, 'test.testCalculator')
+data.setCell(9, 3, 1);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 66 ms</span>
+              <span class="suite-total-time">Total running time: 59 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -337,31 +369,39 @@ return data;
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testClear</span>
-                <span class="method-start">36 ms</span>
+                <span class="method-start">19 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testDiv</span>
-                <span class="method-start">42 ms</span>
+                <span class="method-start">23 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetUserInput</span>
+                <span class="method-start">28 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testHist</span>
-                <span class="method-start">51 ms</span>
+                <span class="method-start">48 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testMult</span>
-                <span class="method-start">57 ms</span>
+                <span class="method-start">53 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testReuse</span>
-                <span class="method-start">64 ms</span>
+                <span class="method-start">58 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testSub</span>
-                <span class="method-start">74 ms</span>
+                <span class="method-start">61 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testWumbo</span>
-                <span class="method-start">81 ms</span>
+                <span class="method-start">67 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testZeroDivide</span>
+                <span class="method-start">70 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

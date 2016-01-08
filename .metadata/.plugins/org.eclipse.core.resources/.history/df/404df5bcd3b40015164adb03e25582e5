@@ -1,0 +1,404 @@
+package calculator;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+/**
+ * This is a simple terminal calculator application.
+ * @maxcharacterline 70
+ * @author Jimmy Kuczynski - kuczynskij
+ * @author Aaron Chun - chunaa
+ */
+public class Calculator {
+	
+	//Scanner object to get user input.
+	private static Scanner in;
+	
+	//contains a running history of all calculations
+	private static ArrayList<Calculation> history 
+		= new ArrayList<>();
+	
+	private static Calculation calc;
+	
+	private static boolean wumbo = false;
+		
+	private static boolean zeroDivision = false;
+	
+	/**
+	 * Runs the program.
+	 * @param args
+	 */
+	public static void main(String [] args){
+		in = new Scanner(System.in);
+		help();
+		try {
+			getUserInput(null);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * Displays a welcome text and the commands available. 
+	 */
+	private static void help(){
+		System.out.println("Welcome to Team Wolfpack's fantastic "
+				+ "terminal calculator!");
+		System.out.println("Supported commands: add, sub, mult, div,"
+				+ " hist, clear, reuse, wumbo, help");
+	}
+	
+	/**
+	 * Gets user input.
+	 * @author kuczynskij
+	 * @throws Exception 
+	 */
+	public static String getUserInput(String cmd) throws Exception{
+		System.out.print("Enter command: ");
+		if(cmd == null){
+			in = new Scanner(System.in);
+			cmd = in.next();
+		}else{
+			in = new Scanner(cmd);
+			cmd = in.next();
+		}
+		switch(cmd){
+			case "add":
+				if(!wumbo)
+					add(null);
+				else
+					sub(null);
+				break;
+			case "sub":
+				if(!wumbo)
+					sub(null);
+				else
+					add(null);
+				break;
+			case "mult":
+				if(!wumbo)
+					mult(null);
+				else
+					div(null);
+				break;
+			case "div":
+				if(!wumbo)
+					div(null);
+				else
+					mult(null);
+				break;
+			case "hist":
+				hist();
+				break;
+			case "clear":
+				clear();
+				break;
+			case "wumbo":
+				wumbo();
+				break;
+			case "help":
+				help();
+				break;
+			case "quit":
+				System.out.println("Thanks for using me I guess...");
+				return null;
+			default:
+				 //Clear the buffer of any extra things input 
+				 //after the incorrect command.
+				in.nextLine();
+				System.out.println("Woops, looks like you inputed an"
+						+ " invalid command.");
+				break;
+			}
+		getUserInput(null);
+		return null;
+	}
+	
+	/**
+	 * Validates user input to ensure that a list of integers has
+	 * been passed in. Then returns them as a List of Integers.
+	 * @author kuczynskij & chuna
+	 * @param c -> Calculation used for reuse
+	 * @return l -> List of user inputed integers
+	 */
+	private static List<Integer> getIntegers(Calculation c){
+		List<Integer> l = new ArrayList<Integer>();		
+		String intStr = in.nextLine().trim();
+        String intStrArr [] = intStr.split(" ");
+        try{
+        	for (int i = 0; i < intStrArr.length; i++) {
+        		int val;
+	            if(intStrArr[i].contains("!")){
+	            	int index = Integer.parseInt(
+	            			intStrArr[i].substring(1));
+	            	val = reuse(index, c);
+	            }else{
+	            	val = Integer.parseInt(intStrArr[i]);
+	            }
+        		
+	            l.add(val);
+            }
+        }catch(NumberFormatException nfe){
+            System.out.println("There was an error in the numbers " 
+            	+ "provided. Command did not finish executing.");
+        }
+		return l;
+	}
+	
+	/**
+	 * User Story #1
+	 * Adds the a list of positive Integers.
+	 * @author kuczynskij
+	 * @param list - list of integers
+	 * @return sum
+	 */
+	public static int add(List<Integer> list){
+		calc = new Calculation("add");
+		double sum = 0;
+		if (list == null)
+			list = getIntegers(calc);
+		if (list != null){
+			calc.setInput(list);
+			for(Integer i : list){
+				if (sum+i >= Integer.MAX_VALUE){
+					sum = Integer.MAX_VALUE;
+				}else if (sum+i <= Integer.MIN_VALUE){
+					sum = Integer.MIN_VALUE;
+				}else{
+					sum += i;
+				}
+			}
+			System.out.println("The sum is: " + (int)sum);
+			calc.setAns((int)sum);
+		}
+		history.add(calc);
+		return (int)sum;
+	}
+	
+	/**
+	 * User Story #2
+	 * Subtracts the list of integers
+	 * @author chuna
+	 * @param l - list of integers
+	 * @return difference
+	 */
+	public static int sub(List<Integer> list){
+		calc = new Calculation("sub");
+		double dif = 0;
+		if (list == null)
+			list = getIntegers(calc);
+		if(list != null){
+			calc.setInput(list);
+			dif = list.get(0);
+			for(int i = 1; i < list.size(); i++){
+				if (dif - list.get(i) > Integer.MAX_VALUE){
+					dif = Integer.MAX_VALUE;
+					System.out.println("During calculations, the "
+							+ "value exceeded the max value for an "
+							+ "integer. Returning answer as the "
+							+ "MAX_VALUE for integers. (2^31 - 1)");
+					break;
+				}else if (dif - list.get(i) < Integer.MIN_VALUE){
+					dif = Integer.MIN_VALUE;
+					System.out.println("During calculations, the "
+							+ "value exceeded the min value for an "
+							+ "integer. Returning answer as the "
+							+ "MIN_VALUE for integers. (-(2^31))");
+					break;
+				}else{
+					dif -= list.get(i);
+				}
+			}
+			System.out.println("The difference is: " + (int)dif);
+			calc.setAns((int)dif);
+		}
+		history.add(calc);
+		return (int)dif;
+	}
+	
+	/**
+	 * User Story #3
+	 * Multiples the a list of positive Integers.
+	 * @author kuczynskij
+	 * @param l - list of integers
+	 * @return product
+	 */
+	public static int mult(List<Integer> list){
+		calc = new Calculation("mult");
+		double product = 1;
+		if (list == null)
+			list = getIntegers(calc);
+		if (list != null){
+			calc.setInput(list);
+			for(Integer i : list){
+				if(product*i >= Integer.MAX_VALUE){
+					product = Integer.MAX_VALUE;
+				}else if(product*i <= Integer.MIN_VALUE){
+					product = Integer.MIN_VALUE;
+				}else{
+					product *= i;
+				}
+			}
+			System.out.println("The product is: " + (int)product);
+			calc.setAns((int)product);
+		}
+		history.add(calc);
+		return (int)product;
+	}
+	
+	/**
+	 * User Story #4
+	 * Divides the list of integers and uses integer division.
+	 * Has a check for zero division
+	 * @author chuna
+	 * @throws Exception
+	 * @param list -> list of Integers
+	 * @return quotient 
+	 */
+	public static int div(List<Integer> list) throws Exception{
+		zeroDivision = false;
+		calc = new Calculation("div");
+		int quot = 0;
+		if (list == null)
+			list = getIntegers(calc);
+		if(list != null){
+			calc.setInput(list);
+			quot = list.get(0);
+			for(int i = 1; i < list.size(); i++){
+				if(list.get(i) != 0){
+					quot /= list.get(i);
+				}else{
+					zeroDivision = true;
+					break;
+				}
+			}
+			if(zeroDivision){
+				System.out.println("Error: Cannot divide by zero.");
+				throw new Exception("divide by zero");
+			}else{
+				System.out.println("The quotient is: " + quot);
+				calc.setAns(quot);
+				history.add(calc);
+			}
+		}
+		return quot;
+	}
+	
+	/**
+	 * User Story #5
+	 * Prints out the previous computation history the user as input.
+	 * @author kuczynskij
+	 * @return hist
+	 */
+	public static String hist(){
+		int h = history.size();
+		String hist = "";
+		if(h > 0){
+			System.out.println("Printing out calculation history.");
+			for(int i = 0; i < h ; ++i){
+				hist += (i + 1) + " | " + history.get(h-(1 + i)) +
+						"\n";
+			}
+			System.out.println(hist.trim());
+			return hist.trim();
+		}else{
+			hist = "There is no history to display.";
+			System.out.println(hist);
+			return hist;
+		}
+	}
+	
+	/**
+	 * User Story #6
+	 * Clears the history list by assigning the history attribute to
+	 * a new ArrayList.
+	 * @author chuna
+	 */
+	public static void clear(){
+		if(history != null)
+			history = new ArrayList<Calculation>();
+		System.out.println("The Calculation history has been"
+				+ " cleared.");
+	}
+	
+	/**
+	 * User Story #7
+	 * Allows the user to use previous results in current 
+	 * calculations.
+	 * Ex: 5 + 3 = 8; -> 2 + result = 10
+	 * @author kuczynskij
+	 * @param num - number of history result
+	 * @param c -> Calculation to get cmd
+	 * @return	previous result
+	 * 		0 -> if add/sub and no hist
+	 * 		1 -> if mult/div and no hist
+	 */
+	public static int reuse(int num, Calculation c){
+		if (history.size() > 0 && num > 0 && history.size() >= num){
+			return history.get(history.size() - num).getAns();
+		}else{
+			//apply identity property
+			//apply 0 to sub or add
+			//apply 1 to mult or div
+			String cmd = c.getCmd();
+			switch(cmd){
+				case "add":
+					return 0;
+				case "sub":
+					return 0;
+				case "mult":
+					return 1;
+				case "div":
+					return 1;
+				default:
+					return 0;
+			}
+		}
+	}
+	
+	/**
+	 * User Story #8
+	 * If true, swaps add with sub and swaps mult with div.
+	 * @author chuna
+	 */
+	public static void wumbo(){
+		if (!wumbo){
+			wumbo = true;
+			System.out.println("I wumbo, you wumbo, he, she, me, "
+					+ "wumbo. Wumbo; wumboing; we'll have thee "
+					+ "wumbo; wumborama; wumbology, the study of "
+					+ "wumbo! It's first grade stuff, User!");
+		}else{
+			wumbo = false;
+			System.out.println("Mini-mode.");
+		}
+	}
+	
+	/**
+	 * Getter method for the history object.
+	 * @author kuczynskij
+	 * @return history
+	 */
+	public static ArrayList<Calculation> getHistory(){
+		return history;
+	}
+	
+	/**
+	 * Getter method for the boolean wumbo.
+	 * @author kuczynskij
+	 * @return wumbo
+	 */
+	public static boolean getWumbo(){
+		return wumbo;
+	}
+	
+	/**
+	 * Getter method for the boolean zeroDivision.
+	 * @author chuna
+	 * @return zeroDivision
+	 */
+	public static boolean getZeroDivision(){
+		return zeroDivision;
+	}
+}

@@ -112,6 +112,7 @@ public class Calculator {
 				break;
 			case "quit":
 				System.out.println("Thanks for using me I guess...");
+//				System.exit(0);
 				return null;
 			default:
 				 //Clear the buffer of any extra things input 
