@@ -14,8 +14,8 @@
     </dependency>
   </dependencies>
   <build>
-    <sourceDirectory>..\team-wolfpack\calculator\src\calculator</sourceDirectory>
-    <testSourceDirectory>..\team-wolfpack\calculator\src\test</testSourceDirectory>
+    <sourceDirectory>/home/travis/build/aaronchun7/se3800/calculator/src/calculator</sourceDirectory>
+    <testSourceDirectory>/home/travis/build/aaronchun7/se3800/calculator/src/test</testSourceDirectory>
     
       <plugins>
 		  <plugin>
